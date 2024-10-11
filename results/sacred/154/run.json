@@ -1,0 +1,118 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.6",
+      "torch==2.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_699957be72b5c513fe610489e2499529.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_1e6c18587721883aa9d0b54466fe4a4b.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_afd01ffb13d0f3f02729896a5cf795d2.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/run.py\", line 26, in run\n    id=\"Foraging-{0}x{0}-{1}p-{2}f{3}\".format(s, p, f),\n",
+    "IndexError: Replacement index 3 out of range for positional args tuple\n"
+  ],
+  "heartbeat": "2024-10-10T00:27:38.151787",
+  "host": {
+    "ENV": {},
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13400F",
+    "gpus": {
+      "driver_version": "535.183.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 4070",
+          "persistence_mode": false,
+          "total_memory": 12282
+        }
+      ]
+    },
+    "hostname": "dayiethan",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-45-generic-x86_64-with-glibc2.39"
+    ],
+    "python_version": "3.9.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "key": "lbforaging:Foraging-15x15-3p-5f-v3",
+        "time_limit": 50
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.time_limit=50",
+        "env_args.key=lbforaging:Foraging-15x15-3p-5f-v3"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-10-10T00:27:38.147961",
+  "status": "FAILED",
+  "stop_time": "2024-10-10T00:27:38.152665"
+}

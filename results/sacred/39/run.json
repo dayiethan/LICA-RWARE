@@ -1,0 +1,115 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.6",
+      "torch==2.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "5dfb7ade4f0eb531d6d88f806ce76a0f4259a78a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "5dfb7ade4f0eb531d6d88f806ce76a0f4259a78a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "5dfb7ade4f0eb531d6d88f806ce76a0f4259a78a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_699957be72b5c513fe610489e2499529.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_e338ad6505c641d8106f8df48ae65096.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_aa14e56e60b01dd7a9ddb8e6cdf36b85.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/run.py\", line 108, in run_sequential\n    mac = mac_REGISTRY[args.mac](buffer.scheme, groups, args)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/controllers/basic_controller.py\", line 12, in __init__\n    self._build_agents(input_shape)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/controllers/basic_controller.py\", line 65, in _build_agents\n    self.agent = agent_REGISTRY[self.args.agent](input_shape, self.args)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/modules/agents/rnn_agent.py\", line 15, in __init__\n    self.fc1 = nn.Linear(input_shape, args.rnn_hidden_dim)\n",
+    "  File \"/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/torch/nn/modules/linear.py\", line 99, in __init__\n    self.weight = Parameter(torch.empty((out_features, in_features), **factory_kwargs))\n",
+    "TypeError: empty(): argument 'size' failed to unpack the object at pos 2 with error \"type must be tuple of ints,but got numpy.ndarray\"\n"
+  ],
+  "heartbeat": "2024-10-07T18:09:23.958839",
+  "host": {
+    "ENV": {},
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13400F",
+    "gpus": {
+      "driver_version": "535.183.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 4070",
+          "persistence_mode": false,
+          "total_memory": 12282
+        }
+      ]
+    },
+    "hostname": "dayiethan",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-45-generic-x86_64-with-glibc2.39"
+    ],
+    "python_version": "3.9.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {},
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-10-07T18:09:21.820369",
+  "status": "FAILED",
+  "stop_time": "2024-10-07T18:09:23.960059"
+}

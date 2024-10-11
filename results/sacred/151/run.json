@@ -1,0 +1,110 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.6",
+      "torch==2.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "a67eea2a0ade84c0e2529a0ea55efead6c1fce6a",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_699957be72b5c513fe610489e2499529.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_9bab5b78698bf521e3d9009e29753712.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_afd01ffb13d0f3f02729896a5cf795d2.py"
+      ]
+    ]
+  },
+  "heartbeat": "2024-10-10T00:20:23.844755",
+  "host": {
+    "ENV": {},
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13400F",
+    "gpus": {
+      "driver_version": "535.183.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 4070",
+          "persistence_mode": false,
+          "total_memory": 12282
+        }
+      ]
+    },
+    "hostname": "dayiethan",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-45-generic-x86_64-with-glibc2.39"
+    ],
+    "python_version": "3.9.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "key": "lbforaging:Foraging-2s-10x10-3p-3f",
+        "time_limit": 50
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.time_limit=50",
+        "env_args.key=lbforaging:Foraging-2s-10x10-3p-3f"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-10-10T00:14:32.423059",
+  "status": "RUNNING"
+}

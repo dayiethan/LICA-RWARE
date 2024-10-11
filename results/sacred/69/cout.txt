@@ -1,0 +1,895 @@
+[INFO 16:06:37] pymarl Running command 'my_main'
+[INFO 16:06:37] pymarl Started run with ID "69"
+[DEBUG 16:06:37] pymarl Starting Heartbeat
+[DEBUG 16:06:37] my_main Started
+[INFO 16:06:37] my_main Experiment Parameters:
+[INFO 16:06:37] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 0.11,
+    'env': 'lbf',
+    'env_args': {   'env': 'lbf',
+                    'env_name': 'Foraging-8x8-2p-1f-v3',
+                    'seed': 474835619},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 474835619,
+    't_max': 10000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 32,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_num_food to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_num_food` for environment variables or `env.get_wrapper_attr('max_num_food')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 474835619}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+[INFO 16:06:38] my_main Beginning training for 10000 timesteps
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-30:
+Process Process-8:
+Process Process-2:
+Process Process-13:
+Process Process-20:
+Process Process-22:
+Process Process-3:
+Process Process-24:
+Process Process-32:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-23:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-7:
+Process Process-26:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-19:
+Process Process-12:
+Process Process-21:
+Process Process-29:
+Process Process-27:
+Process Process-15:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Process Process-28:
+Process Process-11:
+Process Process-5:
+Process Process-1:
+Process Process-16:
+Process Process-18:
+Traceback (most recent call last):
+Process Process-31:
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-10:
+Process Process-17:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+Traceback (most recent call last):
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Process Process-6:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Process Process-4:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-14:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-9:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'
+Process Process-25:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 245, in env_worker
+    "obs": env.get_obs()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 88, in get_obs
+    return flat._flatten_obs(obs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 39, in _flatten_obs
+    [
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 40, in <listcomp>
+    spaces.flatten(obs_space, obs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/spaces/utils.py", line 161, in _flatten_box_multibinary
+    return np.asarray(x, dtype=space.dtype).flatten()
+TypeError: float() argument must be a string or a number, not 'Box'

@@ -1,0 +1,413 @@
+[INFO 00:47:06] pymarl Running command 'my_main'
+[INFO 00:47:06] pymarl Started run with ID "114"
+[DEBUG 00:47:06] pymarl Starting Heartbeat
+[DEBUG 00:47:06] my_main Started
+[INFO 00:47:06] my_main Experiment Parameters:
+[INFO 00:47:06] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 5.0,
+    'env': 'gymma',
+    'env_args': {   'common_reward': False,
+                    'key': 'lbforaging:Foraging-8x8-2p-3f-v3',
+                    'pretrained_wrapper': None,
+                    'reward_scalarisation': False,
+                    'seed': 570913388,
+                    'time_limit': 50},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 570913388,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 96,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+[INFO 00:47:06] my_main Beginning training for 2050000 timesteps
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+[INFO 00:47:07] my_main t_env: 1600 / 2050000
+[INFO 00:47:07] my_main Estimated time left: 23 seconds. Time passed: 0 seconds
+[INFO 00:47:15] my_main Recent Stats | t_env:      51115 | Episode:     1024
+agent_grad_norm:           4.3248	critic_grad_norm:        351.9666	critic_loss:              20.9820	entropy:                   1.6912
+ep_length_mean:           49.9241	epsilon:                   0.2809	mix_loss:                 -7.4911	q_t_mean:                  2.9572
+return_mean:               0.1073	return_std:                0.1464	target_mean:               2.4157	td_error_abs:              3.3171
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:47:15] my_main t_env: 52715 / 2050000
+[INFO 00:47:15] my_main Estimated time left: 5 minutes, 7 seconds. Time passed: 8 seconds
+[INFO 00:47:22] my_main Recent Stats | t_env:     102058 | Episode:     2048
+agent_grad_norm:           0.9298	critic_grad_norm:        137.8223	critic_loss:               9.9062	entropy:                   1.7590
+ep_length_mean:           49.7705	epsilon:                   0.0100	mix_loss:                 -6.3069	q_t_mean:                  1.1553
+return_mean:               0.1926	return_std:                0.2212	target_mean:               1.6411	td_error_abs:              2.3106
+test_ep_length_mean:      50.0000	test_return_mean:          0.0023	test_return_std:           0.0226	
+[INFO 00:47:23] my_main t_env: 103658 / 2050000
+[INFO 00:47:23] my_main Estimated time left: 4 minutes, 58 seconds. Time passed: 16 seconds
+[INFO 00:47:30] my_main Recent Stats | t_env:     152969 | Episode:     3072
+agent_grad_norm:           0.6750	critic_grad_norm:        128.9778	critic_loss:              10.7654	entropy:                   1.7686
+ep_length_mean:           49.6982	epsilon:                   0.0100	mix_loss:                 -7.5996	q_t_mean:                  2.8191
+return_mean:               0.2006	return_std:                0.2240	target_mean:               3.0641	td_error_abs:              2.4006
+test_ep_length_mean:      50.0000	test_return_mean:          0.0015	test_return_std:           0.0150	
+[INFO 00:47:31] my_main t_env: 154569 / 2050000
+[INFO 00:47:31] my_main Estimated time left: 4 minutes, 56 seconds. Time passed: 24 seconds
+[INFO 00:47:39] my_main Recent Stats | t_env:     204081 | Episode:     4096
+agent_grad_norm:           0.3771	critic_grad_norm:         51.0829	critic_loss:               6.7781	entropy:                   1.7684
+ep_length_mean:           49.9214	epsilon:                   0.0100	mix_loss:                 -6.2856	q_t_mean:                  1.4329
+return_mean:               0.1603	return_std:                0.1923	target_mean:               1.5082	td_error_abs:              1.8793
+test_ep_length_mean:      50.0000	test_return_mean:          0.0012	test_return_std:           0.0113	
+[INFO 00:47:39] my_main t_env: 205681 / 2050000
+[INFO 00:47:39] my_main Estimated time left: 4 minutes, 52 seconds. Time passed: 32 seconds
+[INFO 00:47:47] my_main Recent Stats | t_env:     255258 | Episode:     5120
+agent_grad_norm:           0.4363	critic_grad_norm:         56.0576	critic_loss:               6.9162	entropy:                   1.7692
+ep_length_mean:           49.9509	epsilon:                   0.0100	mix_loss:                 -6.9883	q_t_mean:                  2.2164
+return_mean:               0.1252	return_std:                0.1666	target_mean:               2.3303	td_error_abs:              1.8556
+test_ep_length_mean:      50.0000	test_return_mean:          0.0009	test_return_std:           0.0090	
+[INFO 00:47:47] my_main t_env: 256858 / 2050000
+[INFO 00:47:47] my_main Estimated time left: 4 minutes, 42 seconds. Time passed: 40 seconds
+[INFO 00:47:55] my_main Recent Stats | t_env:     306404 | Episode:     6144
+agent_grad_norm:           0.5142	critic_grad_norm:         67.9681	critic_loss:               8.3047	entropy:                   1.7568
+ep_length_mean:           49.9482	epsilon:                   0.0100	mix_loss:                 -7.4118	q_t_mean:                  2.5821
+return_mean:               0.1384	return_std:                0.1797	target_mean:               2.4877	td_error_abs:              2.0649
+test_ep_length_mean:      50.0000	test_return_mean:          0.0009	test_return_std:           0.0090	
+[INFO 00:47:55] my_main t_env: 308004 / 2050000
+[INFO 00:47:55] my_main Estimated time left: 4 minutes, 29 seconds. Time passed: 48 seconds
+[INFO 00:47:57] my_main Updated target network
+[INFO 00:48:03] my_main Recent Stats | t_env:     357348 | Episode:     7168
+agent_grad_norm:           0.3558	critic_grad_norm:         49.1221	critic_loss:               5.0090	entropy:                   1.7653
+ep_length_mean:           49.8411	epsilon:                   0.0100	mix_loss:                 -6.3558	q_t_mean:                  1.4352
+return_mean:               0.1658	return_std:                0.1991	target_mean:               1.4492	td_error_abs:              1.5437
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:03] my_main t_env: 358934 / 2050000
+[INFO 00:48:03] my_main Estimated time left: 4 minutes, 25 seconds. Time passed: 56 seconds
+[INFO 00:48:10] my_main Recent Stats | t_env:     408409 | Episode:     8192
+agent_grad_norm:           0.2057	critic_grad_norm:         20.3851	critic_loss:               2.8761	entropy:                   1.7766
+ep_length_mean:           49.8062	epsilon:                   0.0100	mix_loss:                 -5.8282	q_t_mean:                  0.8153
+return_mean:               0.1644	return_std:                0.1974	target_mean:               0.9282	td_error_abs:              1.1609
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:11] my_main t_env: 410009 / 2050000
+[INFO 00:48:11] my_main Estimated time left: 4 minutes, 15 seconds. Time passed: 1 minutes, 4 seconds
+[INFO 00:48:18] my_main Recent Stats | t_env:     459588 | Episode:     9216
+agent_grad_norm:           0.2087	critic_grad_norm:         15.8871	critic_loss:               3.1378	entropy:                   1.7744
+ep_length_mean:           49.9813	epsilon:                   0.0100	mix_loss:                 -7.0211	q_t_mean:                  1.9691
+return_mean:               0.1293	return_std:                0.1766	target_mean:               1.9642	td_error_abs:              1.1941
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:19] my_main t_env: 461186 / 2050000
+[INFO 00:48:19] my_main Estimated time left: 4 minutes, 8 seconds. Time passed: 1 minutes, 12 seconds
+[INFO 00:48:27] my_main Recent Stats | t_env:     510556 | Episode:    10240
+agent_grad_norm:           0.2502	critic_grad_norm:         27.0826	critic_loss:               3.5763	entropy:                   1.7720
+ep_length_mean:           49.8411	epsilon:                   0.0100	mix_loss:                 -6.4021	q_t_mean:                  1.4023
+return_mean:               0.1580	return_std:                0.2097	target_mean:               1.3008	td_error_abs:              1.1991
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:27] my_main t_env: 512104 / 2050000
+[INFO 00:48:27] my_main Estimated time left: 4 minutes, 6 seconds. Time passed: 1 minutes, 20 seconds
+[INFO 00:48:35] my_main Recent Stats | t_env:     561454 | Episode:    11264
+agent_grad_norm:           0.2255	critic_grad_norm:         21.3188	critic_loss:               3.5882	entropy:                   1.7761
+ep_length_mean:           49.6634	epsilon:                   0.0100	mix_loss:                 -5.4849	q_t_mean:                  0.5295
+return_mean:               0.1658	return_std:                0.2169	target_mean:               0.4907	td_error_abs:              1.2510
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:35] my_main t_env: 563054 / 2050000
+[INFO 00:48:35] my_main Estimated time left: 3 minutes, 56 seconds. Time passed: 1 minutes, 28 seconds
+[INFO 00:48:43] my_main Recent Stats | t_env:     612587 | Episode:    12288
+agent_grad_norm:           0.1777	critic_grad_norm:         18.7236	critic_loss:               3.3336	entropy:                   1.7761
+ep_length_mean:           49.9232	epsilon:                   0.0100	mix_loss:                 -6.3996	q_t_mean:                  1.5023
+return_mean:               0.1432	return_std:                0.1850	target_mean:               1.3845	td_error_abs:              1.1864
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:43] my_main t_env: 614187 / 2050000
+[INFO 00:48:43] my_main Estimated time left: 3 minutes, 48 seconds. Time passed: 1 minutes, 36 seconds
+[INFO 00:48:47] my_main Updated target network
+[INFO 00:48:51] my_main Recent Stats | t_env:     663541 | Episode:    13312
+agent_grad_norm:           0.1364	critic_grad_norm:         21.7827	critic_loss:               3.0724	entropy:                   1.7749
+ep_length_mean:           49.7652	epsilon:                   0.0100	mix_loss:                 -6.4216	q_t_mean:                  1.4119
+return_mean:               0.1755	return_std:                0.2214	target_mean:               1.4142	td_error_abs:              1.1572
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:51] my_main t_env: 665141 / 2050000
+[INFO 00:48:51] my_main Estimated time left: 3 minutes, 35 seconds. Time passed: 1 minutes, 44 seconds
+[INFO 00:48:59] my_main Recent Stats | t_env:     714531 | Episode:    14336
+agent_grad_norm:           0.1337	critic_grad_norm:         11.0597	critic_loss:               2.1205	entropy:                   1.7804
+ep_length_mean:           49.8223	epsilon:                   0.0100	mix_loss:                 -6.6845	q_t_mean:                  1.7417
+return_mean:               0.1729	return_std:                0.2197	target_mean:               1.6830	td_error_abs:              0.9246
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:48:59] my_main t_env: 716104 / 2050000
+[INFO 00:48:59] my_main Estimated time left: 3 minutes, 29 seconds. Time passed: 1 minutes, 52 seconds
+[INFO 00:49:07] my_main Recent Stats | t_env:     765580 | Episode:    15360
+agent_grad_norm:           0.1345	critic_grad_norm:         12.8724	critic_loss:               1.9479	entropy:                   1.7807
+ep_length_mean:           49.8268	epsilon:                   0.0100	mix_loss:                 -5.8911	q_t_mean:                  0.9123
+return_mean:               0.1720	return_std:                0.2093	target_mean:               0.8272	td_error_abs:              0.8706
+test_ep_length_mean:      50.0000	test_return_mean:          0.0004	test_return_std:           0.0041	
+[INFO 00:49:07] my_main t_env: 767180 / 2050000
+[INFO 00:49:07] my_main Estimated time left: 3 minutes, 23 seconds. Time passed: 2 minutes, 0 seconds
+[INFO 00:49:15] my_main Recent Stats | t_env:     816713 | Episode:    16384
+agent_grad_norm:           0.1103	critic_grad_norm:         12.9921	critic_loss:               2.3647	entropy:                   1.7793
+ep_length_mean:           49.9232	epsilon:                   0.0100	mix_loss:                 -6.4398	q_t_mean:                  1.3651
+return_mean:               0.1422	return_std:                0.1901	target_mean:               1.3658	td_error_abs:              0.9932
+test_ep_length_mean:      50.0000	test_return_mean:          0.0004	test_return_std:           0.0041	
+[INFO 00:49:15] my_main t_env: 818313 / 2050000
+[INFO 00:49:15] my_main Estimated time left: 3 minutes, 13 seconds. Time passed: 2 minutes, 8 seconds
+[INFO 00:49:23] my_main Recent Stats | t_env:     867870 | Episode:    17408
+agent_grad_norm:           0.1071	critic_grad_norm:         13.4512	critic_loss:               1.7983	entropy:                   1.7811
+ep_length_mean:           49.9527	epsilon:                   0.0100	mix_loss:                 -6.0064	q_t_mean:                  0.9727
+return_mean:               0.1751	return_std:                0.1991	target_mean:               1.0370	td_error_abs:              0.8949
+test_ep_length_mean:      50.0000	test_return_mean:          0.0004	test_return_std:           0.0041	
+[INFO 00:49:23] my_main t_env: 869470 / 2050000
+[INFO 00:49:23] my_main Estimated time left: 3 minutes, 3 seconds. Time passed: 2 minutes, 16 seconds
+[INFO 00:49:31] my_main Recent Stats | t_env:     918890 | Episode:    18432
+agent_grad_norm:           0.0961	critic_grad_norm:         14.3529	critic_loss:               1.8056	entropy:                   1.7807
+ep_length_mean:           49.8348	epsilon:                   0.0100	mix_loss:                 -5.6984	q_t_mean:                  0.7510
+return_mean:               0.1729	return_std:                0.2162	target_mean:               0.7602	td_error_abs:              0.8834
+test_ep_length_mean:      50.0000	test_return_mean:          0.0004	test_return_std:           0.0041	
+[INFO 00:49:31] my_main t_env: 920467 / 2050000
+[INFO 00:49:31] my_main Estimated time left: 2 minutes, 56 seconds. Time passed: 2 minutes, 24 seconds
+[INFO 00:49:37] my_main Updated target network
+[INFO 00:49:39] my_main Recent Stats | t_env:     969880 | Episode:    19456
+agent_grad_norm:           0.1130	critic_grad_norm:          9.4912	critic_loss:               1.9544	entropy:                   1.7814
+ep_length_mean:           49.8214	epsilon:                   0.0100	mix_loss:                 -6.2975	q_t_mean:                  1.3369
+return_mean:               0.1805	return_std:                0.2086	target_mean:               1.3349	td_error_abs:              0.8693
+test_ep_length_mean:      50.0000	test_return_mean:          0.0004	test_return_std:           0.0041	
+[INFO 00:49:39] my_main t_env: 971480 / 2050000
+[INFO 00:49:39] my_main Estimated time left: 2 minutes, 49 seconds. Time passed: 2 minutes, 32 seconds
+[INFO 00:49:47] my_main Recent Stats | t_env:    1021011 | Episode:    20480
+agent_grad_norm:           0.0739	critic_grad_norm:          8.9725	critic_loss:               1.1205	entropy:                   1.7845
+ep_length_mean:           49.9009	epsilon:                   0.0100	mix_loss:                 -5.7988	q_t_mean:                  0.7825
+return_mean:               0.1486	return_std:                0.1914	target_mean:               0.7655	td_error_abs:              0.7037
+test_ep_length_mean:      50.0000	test_return_mean:          0.0029	test_return_std:           0.0104	
+[INFO 00:49:47] my_main t_env: 1022611 / 2050000
+[INFO 00:49:47] my_main Estimated time left: 2 minutes, 41 seconds. Time passed: 2 minutes, 40 seconds
+[INFO 00:49:55] my_main Recent Stats | t_env:    1072133 | Episode:    21504
+agent_grad_norm:           0.0570	critic_grad_norm:          9.2416	critic_loss:               1.1958	entropy:                   1.7851
+ep_length_mean:           49.9312	epsilon:                   0.0100	mix_loss:                 -5.5533	q_t_mean:                  0.5960
+return_mean:               0.1679	return_std:                0.1975	target_mean:               0.5316	td_error_abs:              0.6766
+test_ep_length_mean:      50.0000	test_return_mean:          0.0029	test_return_std:           0.0104	
+[INFO 00:49:55] my_main t_env: 1073733 / 2050000
+[INFO 00:49:55] my_main Estimated time left: 2 minutes, 34 seconds. Time passed: 2 minutes, 48 seconds
+[INFO 00:50:03] my_main Recent Stats | t_env:    1123266 | Episode:    22528
+agent_grad_norm:           0.0680	critic_grad_norm:          9.9361	critic_loss:               1.4648	entropy:                   1.7845
+ep_length_mean:           49.9071	epsilon:                   0.0100	mix_loss:                 -5.6809	q_t_mean:                  0.6765
+return_mean:               0.1665	return_std:                0.1985	target_mean:               0.7166	td_error_abs:              0.8014
+test_ep_length_mean:      50.0000	test_return_mean:          0.0029	test_return_std:           0.0104	
+[INFO 00:50:03] my_main t_env: 1124866 / 2050000
+[INFO 00:50:03] my_main Estimated time left: 2 minutes, 24 seconds. Time passed: 2 minutes, 56 seconds
+[INFO 00:50:11] my_main Recent Stats | t_env:    1174283 | Episode:    23552
+agent_grad_norm:           0.0473	critic_grad_norm:          6.0723	critic_loss:               1.1502	entropy:                   1.7848
+ep_length_mean:           49.8366	epsilon:                   0.0100	mix_loss:                 -5.4602	q_t_mean:                  0.4468
+return_mean:               0.1813	return_std:                0.2121	target_mean:               0.4698	td_error_abs:              0.7132
+test_ep_length_mean:      50.0000	test_return_mean:          0.0029	test_return_std:           0.0104	
+[INFO 00:50:11] my_main t_env: 1175883 / 2050000
+[INFO 00:50:11] my_main Estimated time left: 2 minutes, 16 seconds. Time passed: 3 minutes, 4 seconds
+[INFO 00:50:19] my_main Recent Stats | t_env:    1225343 | Episode:    24576
+agent_grad_norm:           0.0597	critic_grad_norm:          7.3566	critic_loss:               1.1378	entropy:                   1.7843
+ep_length_mean:           49.8616	epsilon:                   0.0100	mix_loss:                 -5.5624	q_t_mean:                  0.5529
+return_mean:               0.1727	return_std:                0.2095	target_mean:               0.5848	td_error_abs:              0.7077
+test_ep_length_mean:      50.0000	test_return_mean:          0.0029	test_return_std:           0.0104	
+[INFO 00:50:19] my_main t_env: 1226943 / 2050000
+[INFO 00:50:19] my_main Estimated time left: 2 minutes, 9 seconds. Time passed: 3 minutes, 12 seconds
+[INFO 00:50:27] my_main Updated target network
+[INFO 00:50:27] my_main Recent Stats | t_env:    1276483 | Episode:    25600
+agent_grad_norm:           0.1080	critic_grad_norm:          7.2731	critic_loss:               1.3360	entropy:                   1.7839
+ep_length_mean:           49.9464	epsilon:                   0.0100	mix_loss:                 -5.5549	q_t_mean:                  0.5955
+return_mean:               0.1558	return_std:                0.1968	target_mean:               0.5498	td_error_abs:              0.7479
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:50:27] my_main t_env: 1278083 / 2050000
+[INFO 00:50:27] my_main Estimated time left: 2 minutes, 1 seconds. Time passed: 3 minutes, 20 seconds
+[INFO 00:50:35] my_main Recent Stats | t_env:    1327654 | Episode:    26624
+agent_grad_norm:           0.0839	critic_grad_norm:          8.4440	critic_loss:               0.9555	entropy:                   1.7860
+ep_length_mean:           49.9634	epsilon:                   0.0100	mix_loss:                 -5.4444	q_t_mean:                  0.4505
+return_mean:               0.1583	return_std:                0.1934	target_mean:               0.4027	td_error_abs:              0.6302
+test_ep_length_mean:      50.0000	test_return_mean:          0.0006	test_return_std:           0.0058	
+[INFO 00:50:35] my_main t_env: 1329254 / 2050000
+[INFO 00:50:35] my_main Estimated time left: 1 minutes, 54 seconds. Time passed: 3 minutes, 28 seconds
+[INFO 00:50:43] my_main Recent Stats | t_env:    1378764 | Episode:    27648
+agent_grad_norm:           0.0365	critic_grad_norm:          4.7969	critic_loss:               0.6727	entropy:                   1.7871
+ep_length_mean:           49.9196	epsilon:                   0.0100	mix_loss:                 -5.1206	q_t_mean:                  0.1409
+return_mean:               0.1607	return_std:                0.2043	target_mean:               0.1050	td_error_abs:              0.5201
+test_ep_length_mean:      50.0000	test_return_mean:          0.0006	test_return_std:           0.0058	
+[INFO 00:50:44] my_main t_env: 1380364 / 2050000
+[INFO 00:50:44] my_main Estimated time left: 1 minutes, 47 seconds. Time passed: 3 minutes, 37 seconds
+[INFO 00:50:51] my_main Recent Stats | t_env:    1429752 | Episode:    28672
+agent_grad_norm:           0.0469	critic_grad_norm:          4.7823	critic_loss:               0.7084	entropy:                   1.7867
+ep_length_mean:           49.8223	epsilon:                   0.0100	mix_loss:                 -5.0936	q_t_mean:                  0.0734
+return_mean:               0.1531	return_std:                0.1947	target_mean:               0.0826	td_error_abs:              0.5587
+test_ep_length_mean:      50.0000	test_return_mean:          0.0006	test_return_std:           0.0058	
+[INFO 00:50:52] my_main t_env: 1431352 / 2050000
+[INFO 00:50:52] my_main Estimated time left: 1 minutes, 38 seconds. Time passed: 3 minutes, 45 seconds
+[INFO 00:51:00] my_main Recent Stats | t_env:    1480899 | Episode:    29696
+agent_grad_norm:           0.0441	critic_grad_norm:          5.7607	critic_loss:               0.8279	entropy:                   1.7865
+ep_length_mean:           49.9107	epsilon:                   0.0100	mix_loss:                 -5.3565	q_t_mean:                  0.3783
+return_mean:               0.1618	return_std:                0.2051	target_mean:               0.3423	td_error_abs:              0.5729
+test_ep_length_mean:      50.0000	test_return_mean:          0.0006	test_return_std:           0.0058	
+[INFO 00:51:00] my_main t_env: 1482499 / 2050000
+[INFO 00:51:00] my_main Estimated time left: 1 minutes, 29 seconds. Time passed: 3 minutes, 53 seconds
+[INFO 00:51:08] my_main Recent Stats | t_env:    1531959 | Episode:    30720
+agent_grad_norm:           0.0449	critic_grad_norm:          5.8610	critic_loss:               0.7648	entropy:                   1.7871
+ep_length_mean:           49.8750	epsilon:                   0.0100	mix_loss:                 -5.4723	q_t_mean:                  0.4729
+return_mean:               0.1783	return_std:                0.2153	target_mean:               0.4487	td_error_abs:              0.5560
+test_ep_length_mean:      50.0000	test_return_mean:          0.0006	test_return_std:           0.0058	
+[INFO 00:51:08] my_main t_env: 1533559 / 2050000
+[INFO 00:51:08] my_main Estimated time left: 1 minutes, 21 seconds. Time passed: 4 minutes, 1 seconds
+[INFO 00:51:16] my_main Recent Stats | t_env:    1583039 | Episode:    31744
+agent_grad_norm:           0.0404	critic_grad_norm:          5.7788	critic_loss:               0.6364	entropy:                   1.7871
+ep_length_mean:           49.9045	epsilon:                   0.0100	mix_loss:                 -5.4625	q_t_mean:                  0.4339
+return_mean:               0.1771	return_std:                0.2098	target_mean:               0.4865	td_error_abs:              0.5335
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:51:16] my_main t_env: 1584639 / 2050000
+[INFO 00:51:16] my_main Estimated time left: 1 minutes, 13 seconds. Time passed: 4 minutes, 9 seconds
+[INFO 00:51:18] my_main Updated target network
+[INFO 00:51:24] my_main Recent Stats | t_env:    1634030 | Episode:    32768
+agent_grad_norm:           0.0473	critic_grad_norm:          9.4925	critic_loss:               0.6669	entropy:                   1.7874
+ep_length_mean:           49.7750	epsilon:                   0.0100	mix_loss:                 -5.0841	q_t_mean:                  0.0656
+return_mean:               0.1659	return_std:                0.2055	target_mean:               0.0938	td_error_abs:              0.5429
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:51:24] my_main t_env: 1635624 / 2050000
+[INFO 00:51:24] my_main Estimated time left: 1 minutes, 6 seconds. Time passed: 4 minutes, 17 seconds
+[INFO 00:51:32] my_main Recent Stats | t_env:    1685024 | Episode:    33792
+agent_grad_norm:           0.0368	critic_grad_norm:          4.1326	critic_loss:               0.5348	entropy:                   1.7888
+ep_length_mean:           49.7786	epsilon:                   0.0100	mix_loss:                 -5.2086	q_t_mean:                  0.2135
+return_mean:               0.1871	return_std:                0.2151	target_mean:               0.2034	td_error_abs:              0.4718
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:51:32] my_main t_env: 1686624 / 2050000
+[INFO 00:51:32] my_main Estimated time left: 57 seconds. Time passed: 4 minutes, 25 seconds
+[INFO 00:51:40] my_main Recent Stats | t_env:    1736094 | Episode:    34816
+agent_grad_norm:           0.0371	critic_grad_norm:          3.7539	critic_loss:               0.5284	entropy:                   1.7884
+ep_length_mean:           49.8705	epsilon:                   0.0100	mix_loss:                 -5.3492	q_t_mean:                  0.3481
+return_mean:               0.1849	return_std:                0.2049	target_mean:               0.3415	td_error_abs:              0.4631
+test_ep_length_mean:      50.0000	test_return_mean:          0.0002	test_return_std:           0.0023	
+[INFO 00:51:40] my_main t_env: 1737694 / 2050000
+[INFO 00:51:40] my_main Estimated time left: 49 seconds. Time passed: 4 minutes, 33 seconds
+[INFO 00:51:48] my_main Recent Stats | t_env:    1787025 | Episode:    35840
+agent_grad_norm:           0.0374	critic_grad_norm:          3.8500	critic_loss:               0.6918	entropy:                   1.7882
+ep_length_mean:           49.7875	epsilon:                   0.0100	mix_loss:                 -5.4254	q_t_mean:                  0.4364
+return_mean:               0.1705	return_std:                0.2048	target_mean:               0.4057	td_error_abs:              0.5229
+test_ep_length_mean:      50.0000	test_return_mean:          0.0002	test_return_std:           0.0023	
+[INFO 00:51:48] my_main t_env: 1788625 / 2050000
+[INFO 00:51:48] my_main Estimated time left: 41 seconds. Time passed: 4 minutes, 41 seconds
+[INFO 00:51:56] my_main Recent Stats | t_env:    1838143 | Episode:    36864
+agent_grad_norm:           0.0347	critic_grad_norm:          4.4453	critic_loss:               0.4360	entropy:                   1.7888
+ep_length_mean:           49.9000	epsilon:                   0.0100	mix_loss:                 -5.1717	q_t_mean:                  0.1737
+return_mean:               0.1598	return_std:                0.1916	target_mean:               0.1661	td_error_abs:              0.4283
+test_ep_length_mean:      50.0000	test_return_mean:          0.0002	test_return_std:           0.0023	
+[INFO 00:51:56] my_main t_env: 1839743 / 2050000
+[INFO 00:51:56] my_main Estimated time left: 33 seconds. Time passed: 4 minutes, 50 seconds
+[INFO 00:52:04] my_main Recent Stats | t_env:    1889272 | Episode:    37888
+agent_grad_norm:           0.0252	critic_grad_norm:          4.5892	critic_loss:               0.5202	entropy:                   1.7890
+ep_length_mean:           49.9357	epsilon:                   0.0100	mix_loss:                 -5.1668	q_t_mean:                  0.1573
+return_mean:               0.1515	return_std:                0.1854	target_mean:               0.1546	td_error_abs:              0.4588
+test_ep_length_mean:      50.0000	test_return_mean:          0.0009	test_return_std:           0.0090	
+[INFO 00:52:05] my_main t_env: 1890872 / 2050000
+[INFO 00:52:05] my_main Estimated time left: 25 seconds. Time passed: 4 minutes, 58 seconds
+[INFO 00:52:08] my_main Updated target network
+[INFO 00:52:12] my_main Recent Stats | t_env:    1940410 | Episode:    38912
+agent_grad_norm:           0.0256	critic_grad_norm:          6.6609	critic_loss:               0.5448	entropy:                   1.7889
+ep_length_mean:           49.9446	epsilon:                   0.0100	mix_loss:                 -5.6366	q_t_mean:                  0.6382
+return_mean:               0.1367	return_std:                0.1837	target_mean:               0.6376	td_error_abs:              0.4848
+test_ep_length_mean:      50.0000	test_return_mean:          0.0009	test_return_std:           0.0090	
+[INFO 00:52:12] my_main t_env: 1942010 / 2050000
+[INFO 00:52:12] my_main Estimated time left: 16 seconds. Time passed: 5 minutes, 6 seconds
+[INFO 00:52:20] my_main Recent Stats | t_env:    1991451 | Episode:    39936
+agent_grad_norm:           0.0304	critic_grad_norm:          3.6149	critic_loss:               0.3240	entropy:                   1.7895
+ep_length_mean:           49.8580	epsilon:                   0.0100	mix_loss:                 -5.3340	q_t_mean:                  0.3125
+return_mean:               0.1636	return_std:                0.2011	target_mean:               0.3448	td_error_abs:              0.3793
+test_ep_length_mean:      50.0000	test_return_mean:          0.0007	test_return_std:           0.0068	
+[INFO 00:52:20] my_main t_env: 1993051 / 2050000
+[INFO 00:52:20] my_main Estimated time left: 8 seconds. Time passed: 5 minutes, 13 seconds

@@ -1,0 +1,842 @@
+[INFO 11:46:51] pymarl Running command 'my_main'
+[INFO 11:46:51] pymarl Started run with ID "46"
+[DEBUG 11:46:51] pymarl Starting Heartbeat
+[DEBUG 11:46:51] my_main Started
+[INFO 11:46:51] my_main Experiment Parameters:
+[INFO 11:46:51] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 0.11,
+    'env': 'lbf',
+    'env_args': {   'env': 'lbf',
+                    'env_name': 'Foraging-8x8-2p-1f-v3',
+                    'seed': 325735949},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 325735949,
+    't_max': 10000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 32,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_num_food to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_num_food` for environment variables or `env.get_wrapper_attr('max_num_food')` that will search the reminding wrappers.[0m
+  logger.warn(
+ Kwargs: {'env_name': 'Foraging-8x8-2p-1f-v3', 'seed': 325735949}
+input_shape
+<class 'tuple'>
+(1,)
+<class 'numpy.ndarray'>
+[7]
+<class 'numpy.ndarray'>
+[9]
+TEST1
+TEST2
+<class 'int'>
+<class 'int'>
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.n_agents to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.n_agents` for environment variables or `env.get_wrapper_attr('n_agents')` that will search the reminding wrappers.[0m
+  logger.warn(
+[INFO 11:46:51] my_main Beginning training for 10000 timesteps
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e970>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea00>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec10>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb20>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ebb0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea30>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea90>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb80>
+{'agent_position': (6, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (2, 3), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (5, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (2, 5), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e940>
+{'agent_position': (0, 6), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (2, 3), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e9d0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ebe0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eaf0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb80>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea00>
+{'agent_position': (6, 7), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (1, 3), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (2, 0), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea60>
+{'agent_position': (3, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (0, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (5, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (6, 3), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (1, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb50>
+{'agent_position': (6, 1), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (2, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec40>
+{'agent_position': (6, 3), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec10>
+{'agent_position': (5, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eac0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb50>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea60>
+{'agent_position': (1, 4), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (7, 0), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (5, 2), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eb20>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea90>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ea30>
+{'agent_position': (3, 1), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (4, 6), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (7, 5), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed00>
+{'agent_position': (4, 7), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ecd0>
+{'agent_position': (6, 5), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ee50>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ee80>
+{'agent_position': (4, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad38040>
+{'agent_position': (3, 7), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad38040>
+{'agent_position': (5, 0), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (6, 7), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec70>
+{'agent_position': (4, 6), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec40>
+{'agent_position': (3, 4), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e9a0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ebe0>
+{'agent_position': (3, 0), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e970>
+{'agent_position': (5, 5), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (1, 6), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ebb0>
+{'agent_position': (2, 7), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eaf0>
+{'agent_position': (2, 6), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eac0>
+{'agent_position': (3, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ecd0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed90>
+{'agent_position': (2, 3), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eca0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eca0>
+{'agent_position': (3, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (1, 0), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed60>
+{'agent_position': (4, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ec70>
+{'agent_position': (6, 2), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (1, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2edf0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ee20>
+{'agent_position': (5, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (3, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2edc0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2edf0>
+{'agent_position': (4, 1), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (0, 3), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e9d0>
+{'agent_position': (1, 5), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2e9a0>
+{'agent_position': (2, 0), 'agent_level': 2, 'grid_size': (8, 8)}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-4:
+Process Process-1:
+Process Process-10:
+Process Process-15:
+Process Process-5:
+Process Process-13:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-7:
+Process Process-12:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-16:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-8:
+Process Process-11:
+Process Process-6:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+Process Process-20:
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+Process Process-27:
+Process Process-28:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+Process Process-17:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-2:
+Process Process-14:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-9:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+Traceback (most recent call last):
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-19:
+Process Process-23:
+Process Process-18:
+Traceback (most recent call last):
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+Traceback (most recent call last):
+Traceback (most recent call last):
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+Process Process-25:
+Process Process-26:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-3:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/pytho<lbforaging.foraging.environment.Player object at 0x75b50ad2ed30>
+{'agent_position': (7, 7), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed00>
+{'agent_position': (3, 4), 'agent_level': 1, 'grid_size': (8, 8)}
+n3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-21:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed60>
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+{'agent_position': (4, 6), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed30>
+{'agent_position': (7, 3), 'agent_level': 1, 'grid_size': (8, 8)}
+Process Process-22:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+<lbforaging.foraging.environment.Player object at 0x75b50ad2edc0>
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+{'agent_position': (2, 4), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ed90>
+{'agent_position': (1, 0), 'agent_level': 2, 'grid_size': (8, 8)}
+Process Process-24:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eeb0>
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+{'agent_position': (0, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad38070>
+{'agent_position': (4, 1), 'agent_level': 1, 'grid_size': (8, 8)}
+Process Process-29:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.players to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.players` for environment variables or `env.get_wrapper_attr('players')` that will search the reminding wrappers.[0m
+  logger.warn(
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ef10>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2ef40>
+<lbforaging.foraging.environment.Player object at 0x75b50ad2eee0>
+{'agent_position': (3, 2), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (3, 3), 'agent_level': 1, 'grid_size': (8, 8)}
+{'agent_position': (6, 1), 'agent_level': 2, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad380d0>
+<lbforaging.foraging.environment.Player object at 0x75b50ad38100>
+{'agent_position': (4, 3), 'agent_level': 2, 'grid_size': (8, 8)}
+{'agent_position': (4, 4), 'agent_level': 1, 'grid_size': (8, 8)}
+<lbforaging.foraging.environment.Player object at 0x75b50ad380a0>
+{'agent_position': (2, 6), 'agent_level': 1, 'grid_size': (8, 8)}
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.field_size to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.field_size` for environment variables or `env.get_wrapper_attr('field_size')` that will search the reminding wrappers.[0m
+  logger.warn(
+Process Process-31:
+Process Process-32:
+Process Process-30:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated
+ValueError: zero-dimensional arrays cannot be concatenated
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 237, in env_worker
+    env.reset()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 16, in reset
+    return [obs[i] for i in range(self.n_agents)], self.get_state()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/lbfenv.py", line 24, in get_state
+    return np.concatenate([self.get_agent_state(self.env, i) for i in range(self.n_agents)])
+ValueError: zero-dimensional arrays cannot be concatenated

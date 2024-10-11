@@ -1,0 +1,767 @@
+[INFO 18:25:44] pymarl Running command 'my_main'
+[INFO 18:25:44] pymarl Started run with ID "182"
+[DEBUG 18:25:44] pymarl Starting Heartbeat
+[DEBUG 18:25:44] my_main Started
+[INFO 18:25:44] my_main Experiment Parameters:
+[INFO 18:25:44] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 100.0,
+    'env': 'gymma',
+    'env_args': {   'common_reward': False,
+                    'key': 'lbforaging:Foraging-15x15-3p-5f-v3',
+                    'pretrained_wrapper': None,
+                    'reward_scalarisation': False,
+                    'seed': 188059572,
+                    'time_limit': 50},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 188059572,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 96,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+Process Process-1:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-2:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-3:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-4:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-5:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-6:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-7:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-8:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-9:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-10:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-11:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-12:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-13:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-14:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-15:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-16:
+Process Process-17:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+Traceback (most recent call last):
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-18:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-19:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-20:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-21:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-22:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-23:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-24:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-25:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-26:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-27:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-28:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-29:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-30:
+Process Process-31:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})
+Process Process-32:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 802, in make
+    env = env_creator(**env_spec_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_food'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 215, in env_worker
+    env = env_fn.x()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/__init__.py", line 21, in gymma_fn
+    return GymmaWrapper(**kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/envs/gymma.py", line 98, in __init__
+    self._env = gym.make(f"{key}", **kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 814, in make
+    raise type(e)(
+TypeError: __init__() got an unexpected keyword argument 'max_food' was raised from the environment creator for Foraging-15x15-3p-5f-v3 with kwargs ({'players': 3, 'max_player_level': 3, 'field_size': (15, 15), 'max_food': 5, 'sight': 15, 'max_episode_steps': 50, 'force_coop': False})

@@ -1,0 +1,3420 @@
+[INFO 00:06:07] pymarl Running command 'my_main'
+[INFO 00:06:07] pymarl Started run with ID "106"
+[DEBUG 00:06:07] pymarl Starting Heartbeat
+[DEBUG 00:06:07] my_main Started
+[INFO 00:06:07] my_main Experiment Parameters:
+[INFO 00:06:07] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 0.11,
+    'env': 'gymma',
+    'env_args': {   'common_reward': False,
+                    'key': 'lbforaging:Foraging-8x8-2p-3f-v3',
+                    'pretrained_wrapper': None,
+                    'reward_scalarisation': False,
+                    'seed': 992991564,
+                    'time_limit': 50},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 992991564,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 96,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+[INFO 00:06:08] my_main Beginning training for 2050000 timesteps
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+[INFO 00:06:08] my_main t_env: 1600 / 2050000
+[INFO 00:06:08] my_main Estimated time left: 26 seconds. Time passed: 0 seconds
+[tensor(11.7750, device='cuda:0'), tensor(7.3482, device='cuda:0'), tensor(9.7918, device='cuda:0'), tensor(15.8741, device='cuda:0'), tensor(13.1964, device='cuda:0')]
+<class 'list'>
+5
+tensor(11.7750, device='cuda:0')
+11.597116
+[tensor(1647.7433, device='cuda:0'), tensor(1243.8076, device='cuda:0'), tensor(511.4435, device='cuda:0'), tensor(3470.6375, device='cuda:0'), tensor(4411.5889, device='cuda:0')]
+<class 'list'>
+5
+tensor(1647.7433, device='cuda:0')
+2257.0442
+[49.196651458740234, 43.78181457519531, 24.643455505371094, 105.48109436035156, 81.2428970336914]
+<class 'list'>
+5
+49.196651458740234
+60.86918258666992
+[1.7666348218917847, 1.4218754768371582, 1.5040388107299805, 1.2369558811187744, 0.6561680436134338]
+<class 'list'>
+5
+1.7666348218917847
+1.3171346068382264
+[50.0, 49.745535714285715, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+49.949107142857144
+[0.28075930000000004]
+<class 'list'>
+1
+0.28075930000000004
+0.28075930000000004
+[-1.5560969114303589, -9.343385696411133, -10.274889945983887, -23.242462158203125, -16.58241081237793]
+<class 'list'>
+5
+-1.5560969114303589
+-12.199849104881286
+[13.93596923828125, 7.466334838867187, 12.803416748046875, 21.76566650390625, 15.845220947265625]
+<class 'list'>
+5
+13.93596923828125
+14.363321655273438
+[0.14375000000000002, 0.20524022108843537, 0.12534013605442176, 0.06851615646258503, 0.02321428571428572]
+<class 'list'>
+5
+0.14375000000000002
+0.11321215986394557
+[0.0899218410621135, 0.22399455234178772, 0.14735968277570372, 0.12814504357487808, 0.08962435779521145]
+<class 'list'>
+5
+0.0899218410621135
+0.1358090955099389
+[11.4122412109375, 9.484259033203125, 12.16658203125, 28.335673828125, 21.5621435546875]
+<class 'list'>
+5
+11.4122412109375
+16.592179931640622
+[5.338541259765625, 5.231156005859375, 3.7796926879882813, 9.154486083984375, 7.931278686523438]
+<class 'list'>
+5
+5.338541259765625
+6.2870309448242185
+[50.0]
+<class 'list'>
+1
+50.0
+50.0
+[0.0]
+<class 'list'>
+1
+0.0
+0.0
+[0.0]
+<class 'list'>
+1
+0.0
+0.0
+[INFO 00:06:16] my_main Recent Stats | t_env:      51143 | Episode:     1024
+agent_grad_norm:          11.5971	critic_grad_norm:        2257.0442	critic_loss:              60.8692	entropy:                   1.3171
+ep_length_mean:           49.9491	epsilon:                   0.2808	mix_loss:                -12.1998	q_t_mean:                 14.3633
+return_mean:               0.1132	return_std:                0.1358	target_mean:              16.5922	td_error_abs:              6.2870
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:16] my_main t_env: 52743 / 2050000
+[INFO 00:06:16] my_main Estimated time left: 5 minutes, 6 seconds. Time passed: 8 seconds
+[tensor(25.4693, device='cuda:0'), tensor(6.0888, device='cuda:0'), tensor(0.3669, device='cuda:0'), tensor(5.7712, device='cuda:0'), tensor(0.4099, device='cuda:0')]
+<class 'list'>
+5
+tensor(25.4693, device='cuda:0')
+7.6212234
+[tensor(4157.3325, device='cuda:0'), tensor(3457.4827, device='cuda:0'), tensor(404.1781, device='cuda:0'), tensor(1233.4739, device='cuda:0'), tensor(4866.8804, device='cuda:0')]
+<class 'list'>
+5
+tensor(4157.3325, device='cuda:0')
+2823.8696
+[111.31574249267578, 95.87730407714844, 58.5510139465332, 47.66270446777344, 93.18445587158203]
+<class 'list'>
+5
+111.31574249267578
+81.31824417114258
+[0.9450402855873108, 0.7425962686538696, 0.7085091471672058, 0.6468271613121033, 0.38293197751045227]
+<class 'list'>
+5
+0.9450402855873108
+0.6851809680461883
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-29.821001052856445, -22.741485595703125, -24.460248947143555, -22.643526077270508, -28.06131362915039]
+<class 'list'>
+5
+-29.821001052856445
+-25.545515060424805
+[34.27390625, 19.781759033203127, 27.96131591796875, 21.71666015625, 30.671435546875]
+<class 'list'>
+5
+34.27390625
+26.881015380859374
+[0.03840348639455782, 0.02414965986394558, 0.005803571428571429, 0.014583333333333335, 0.0047831632653061226]
+<class 'list'>
+5
+0.03840348639455782
+0.017544642857142856
+[0.09546519022839814, 0.07428109255887717, 0.035194317541968306, 0.07589169000036243, 0.04268554499487838]
+<class 'list'>
+5
+0.09546519022839814
+0.06470356706489688
+[28.5690478515625, 26.279990234375, 28.047001953125, 19.99298095703125, 23.0843798828125]
+<class 'list'>
+5
+28.5690478515625
+25.19468017578125
+[7.3980615234375, 8.80451904296875, 5.107630310058593, 4.656317138671875, 7.860679931640625]
+<class 'list'>
+5
+7.3980615234375
+6.7654415893554685
+[50.0, 50.0]
+<class 'list'>
+2
+50.0
+50.0
+[0.0, 0.0]
+<class 'list'>
+2
+0.0
+0.0
+[0.0, 0.0]
+<class 'list'>
+2
+0.0
+0.0
+[INFO 00:06:24] my_main Recent Stats | t_env:     102343 | Episode:     2048
+agent_grad_norm:           7.6212	critic_grad_norm:        2823.8696	critic_loss:              81.3182	entropy:                   0.6852
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -25.5455	q_t_mean:                 26.8810
+return_mean:               0.0175	return_std:                0.0647	target_mean:              25.1947	td_error_abs:              6.7654
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:24] my_main t_env: 103943 / 2050000
+[INFO 00:06:24] my_main Estimated time left: 5 minutes, 5 seconds. Time passed: 16 seconds
+[tensor(0.4099, device='cuda:0'), tensor(0.8420, device='cuda:0'), tensor(1.8775, device='cuda:0'), tensor(0.9156, device='cuda:0'), tensor(0.5064, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.4099, device='cuda:0')
+0.9102875
+[tensor(4866.8804, device='cuda:0'), tensor(1222.4554, device='cuda:0'), tensor(132.0186, device='cuda:0'), tensor(571.5356, device='cuda:0'), tensor(1217.4669, device='cuda:0')]
+<class 'list'>
+5
+tensor(4866.8804, device='cuda:0')
+1602.0714
+[93.18445587158203, 42.67196273803711, 19.121301651000977, 46.386714935302734, 41.98903274536133]
+<class 'list'>
+5
+93.18445587158203
+48.67069358825684
+[0.38293197751045227, 0.28693878650665283, 0.24497386813163757, 0.21923761069774628, 0.20087890326976776]
+<class 'list'>
+5
+0.38293197751045227
+0.26699222922325133
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-28.06131362915039, -21.532203674316406, -13.738130569458008, -19.55224609375, -19.887502670288086]
+<class 'list'>
+5
+-28.06131362915039
+-20.554279327392578
+[30.671435546875, 20.300870361328126, 14.34614501953125, 20.87308349609375, 17.46806396484375]
+<class 'list'>
+5
+30.671435546875
+20.731919677734375
+[0.0047831632653061226, 0.004028486394557823, 0.00822704081632653, 0.0035714285714285718, 0.0011160714285714285]
+<class 'list'>
+5
+0.0047831632653061226
+0.004345238095238096
+[0.04268554499487838, 0.030492622164575343, 0.0467830402821308, 0.03253726278265822, 0.016666500583781337]
+<class 'list'>
+5
+0.04268554499487838
+0.03383299416160481
+[23.0843798828125, 17.684578857421876, 14.686097412109374, 19.87755615234375, 20.43186279296875]
+<class 'list'>
+5
+23.0843798828125
+19.15289501953125
+[7.860679931640625, 4.642673034667968, 2.8891802978515626, 5.115408935546875, 5.2017626953125]
+<class 'list'>
+5
+7.860679931640625
+5.141940979003906
+[50.0, 50.0, 50.0]
+<class 'list'>
+3
+50.0
+50.0
+[0.0, 0.0, 0.0]
+<class 'list'>
+3
+0.0
+0.0
+[0.0, 0.0, 0.0]
+<class 'list'>
+3
+0.0
+0.0
+[INFO 00:06:32] my_main Recent Stats | t_env:     153543 | Episode:     3072
+agent_grad_norm:           0.9103	critic_grad_norm:        1602.0714	critic_loss:              48.6707	entropy:                   0.2670
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -20.5543	q_t_mean:                 20.7319
+return_mean:               0.0043	return_std:                0.0338	target_mean:              19.1529	td_error_abs:              5.1419
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:32] my_main t_env: 155143 / 2050000
+[INFO 00:06:32] my_main Estimated time left: 4 minutes, 45 seconds. Time passed: 24 seconds
+[tensor(1.7867, device='cuda:0'), tensor(1.1871, device='cuda:0'), tensor(0.6460, device='cuda:0'), tensor(0.2629, device='cuda:0'), tensor(1.6116, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.7867, device='cuda:0')
+1.0988495
+[tensor(291.2128, device='cuda:0'), tensor(307.6314, device='cuda:0'), tensor(1005.0802, device='cuda:0'), tensor(576.3165, device='cuda:0'), tensor(245.3458, device='cuda:0')]
+<class 'list'>
+5
+tensor(291.2128, device='cuda:0')
+485.11734
+[19.504859924316406, 19.14197540283203, 40.97950744628906, 39.310218811035156, 41.74189758300781]
+<class 'list'>
+5
+19.504859924316406
+32.1356918334961
+[0.21609880030155182, 0.2562943398952484, 0.3480338156223297, 0.44839954376220703, 0.49256858229637146]
+<class 'list'>
+5
+0.21609880030155182
+0.3522790163755417
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-12.088007926940918, -15.196568489074707, -17.03397560119629, -18.498586654663086, -22.311538696289062]
+<class 'list'>
+5
+-12.088007926940918
+-17.025735473632814
+[13.11855712890625, 15.3161962890625, 15.49980224609375, 18.543125, 22.964921875]
+<class 'list'>
+5
+13.11855712890625
+17.0885205078125
+[0.0035714285714285718, 0.0051445578231292515, 0.0031249999999999997, 0.0025669642857142857, 0.004055059523809524]
+<class 'list'>
+5
+0.0035714285714285718
+0.0036926020408163266
+[0.0264864231681988, 0.0388406994313937, 0.02808639325565159, 0.022820044793029376, 0.027548432174521922]
+<class 'list'>
+5
+0.0264864231681988
+0.028756398564559082
+[14.118382568359374, 14.50299072265625, 18.333521728515624, 20.260181884765625, 23.7028857421875]
+<class 'list'>
+5
+14.118382568359374
+18.183592529296877
+[3.1901483154296875, 2.7833673095703126, 5.29655029296875, 4.7333642578125, 4.498270568847656]
+<class 'list'>
+5
+3.1901483154296875
+4.100340148925781
+[50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+4
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+4
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+4
+0.0
+0.0
+[INFO 00:06:40] my_main Recent Stats | t_env:     204743 | Episode:     4096
+agent_grad_norm:           1.0988	critic_grad_norm:        485.1173	critic_loss:              32.1357	entropy:                   0.3523
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -17.0257	q_t_mean:                 17.0885
+return_mean:               0.0037	return_std:                0.0288	target_mean:              18.1836	td_error_abs:              4.1003
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:40] my_main t_env: 206343 / 2050000
+[INFO 00:06:40] my_main Estimated time left: 4 minutes, 36 seconds. Time passed: 31 seconds
+[tensor(1.6116, device='cuda:0'), tensor(2.4021, device='cuda:0'), tensor(2.0751, device='cuda:0'), tensor(0.2999, device='cuda:0'), tensor(0.6598, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.6116, device='cuda:0')
+1.4096875
+[tensor(245.3458, device='cuda:0'), tensor(458.5227, device='cuda:0'), tensor(2135.4526, device='cuda:0'), tensor(1437.3602, device='cuda:0'), tensor(783.5458, device='cuda:0')]
+<class 'list'>
+5
+tensor(245.3458, device='cuda:0')
+1012.04553
+[41.74189758300781, 44.670074462890625, 65.9374008178711, 57.42276382446289, 29.744813919067383]
+<class 'list'>
+5
+41.74189758300781
+47.903390121459964
+[0.49256858229637146, 0.634665846824646, 0.39683055877685547, 0.24757781624794006, 0.20305809378623962]
+<class 'list'>
+5
+0.49256858229637146
+0.39494017958641053
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-22.311538696289062, -25.660503387451172, -27.13837432861328, -20.448917388916016, -19.008243560791016]
+<class 'list'>
+5
+-22.311538696289062
+-22.913515472412108
+[22.964921875, 23.4067822265625, 29.86933349609375, 18.882542724609376, 20.8848486328125]
+<class 'list'>
+5
+22.964921875
+23.201685791015628
+[0.004055059523809524, 0.008333333333333333, 0.0026041666666666665, 0.0, 0.0008928571428571429]
+<class 'list'>
+5
+0.004055059523809524
+0.003177083333333333
+[0.027548432174521922, 0.04965156369922077, 0.022809034309478168, 0.0, 0.01333320046702507]
+<class 'list'>
+5
+0.027548432174521922
+0.022668446130049185
+[23.7028857421875, 24.53607421875, 25.37796142578125, 22.34224853515625, 18.91671630859375]
+<class 'list'>
+5
+23.7028857421875
+22.97517724609375
+[4.498270568847656, 4.88779052734375, 5.09163818359375, 6.387945556640625, 3.2641552734375]
+<class 'list'>
+5
+4.498270568847656
+4.825960021972656
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:06:47] my_main Recent Stats | t_env:     255943 | Episode:     5120
+agent_grad_norm:           1.4097	critic_grad_norm:        1012.0455	critic_loss:              47.9034	entropy:                   0.3949
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -22.9135	q_t_mean:                 23.2017
+return_mean:               0.0032	return_std:                0.0227	target_mean:              22.9752	td_error_abs:              4.8260
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:48] my_main t_env: 257543 / 2050000
+[INFO 00:06:48] my_main Estimated time left: 4 minutes, 34 seconds. Time passed: 39 seconds
+[tensor(0.2117, device='cuda:0'), tensor(0.5285, device='cuda:0'), tensor(0.7367, device='cuda:0'), tensor(1.2578, device='cuda:0'), tensor(0.6110, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.2117, device='cuda:0')
+0.6691282
+[tensor(1256.5029, device='cuda:0'), tensor(1106.1254, device='cuda:0'), tensor(304.9526, device='cuda:0'), tensor(464.7202, device='cuda:0'), tensor(109.8442, device='cuda:0')]
+<class 'list'>
+5
+tensor(1256.5029, device='cuda:0')
+648.4291
+[46.96135711669922, 44.227413177490234, 30.047224044799805, 26.762676239013672, 30.52962875366211]
+<class 'list'>
+5
+46.96135711669922
+35.70565986633301
+[0.21595489978790283, 0.22307124733924866, 0.20826759934425354, 0.21152754127979279, 0.27437254786491394]
+<class 'list'>
+5
+0.21595489978790283
+0.22663876712322234
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-19.79998779296875, -20.975385665893555, -21.07843017578125, -17.111778259277344, -17.94956398010254]
+<class 'list'>
+5
+-19.79998779296875
+-19.383029174804687
+[18.011568603515624, 22.8474658203125, 20.24841064453125, 16.8124267578125, 18.790977783203125]
+<class 'list'>
+5
+18.011568603515624
+19.342169921875
+[0.002232142857142857, 0.0023915816326530613, 0.0011160714285714285, 0.0, 0.0]
+<class 'list'>
+5
+0.002232142857142857
+0.0011479591836734693
+[0.019158323198785316, 0.02525331030414983, 0.016666500583781337, 0.0, 0.0]
+<class 'list'>
+5
+0.019158323198785316
+0.012215626817343296
+[21.533017578125, 20.222685546875, 19.4281640625, 18.2315283203125, 18.7928564453125]
+<class 'list'>
+5
+21.533017578125
+19.641650390624996
+[5.9156298828125, 4.142137451171875, 3.5996923828125, 3.8213934326171874, 3.6407760620117187]
+<class 'list'>
+5
+5.9156298828125
+4.223925842285157
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:06:55] my_main Recent Stats | t_env:     307143 | Episode:     6144
+agent_grad_norm:           0.6691	critic_grad_norm:        648.4291	critic_loss:              35.7057	entropy:                   0.2266
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -19.3830	q_t_mean:                 19.3422
+return_mean:               0.0011	return_std:                0.0122	target_mean:              19.6417	td_error_abs:              4.2239
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:06:56] my_main t_env: 308743 / 2050000
+[INFO 00:06:56] my_main Estimated time left: 4 minutes, 29 seconds. Time passed: 47 seconds
+[INFO 00:06:58] my_main Updated target network
+[tensor(0.6110, device='cuda:0'), tensor(0.6823, device='cuda:0'), tensor(1.4143, device='cuda:0'), tensor(2.3755, device='cuda:0'), tensor(1.7634, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.6110, device='cuda:0')
+1.3693063
+[tensor(109.8442, device='cuda:0'), tensor(913.1741, device='cuda:0'), tensor(469.6270, device='cuda:0'), tensor(713.7098, device='cuda:0'), tensor(371.9488, device='cuda:0')]
+<class 'list'>
+5
+tensor(109.8442, device='cuda:0')
+515.66077
+[30.52962875366211, 36.72713851928711, 29.212892532348633, 27.133676528930664, 21.631507873535156]
+<class 'list'>
+5
+30.52962875366211
+29.046968841552733
+[0.27437254786491394, 0.3644947111606598, 0.5022463202476501, 0.6975244879722595, 0.5981048345565796]
+<class 'list'>
+5
+0.27437254786491394
+0.4873485803604126
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-17.94956398010254, -19.94173240661621, -16.719558715820312, -21.339702606201172, -16.06985855102539]
+<class 'list'>
+5
+-17.94956398010254
+-18.404083251953125
+[18.790977783203125, 19.73763671875, 17.117557373046875, 21.16491455078125, 15.6963330078125]
+<class 'list'>
+5
+18.790977783203125
+18.501483886718752
+[0.0, 0.0033482142857142855, 0.0058886054421768705, 0.003869047619047619, 0.0]
+<class 'list'>
+5
+0.0
+0.002621173469387755
+[0.0, 0.028737484798177972, 0.040303829470283443, 0.033995078925580735, 0.0]
+<class 'list'>
+5
+0.0
+0.02060727863880843
+[18.7928564453125, 17.19078857421875, 18.87826904296875, 19.3736083984375, 17.0884912109375]
+<class 'list'>
+5
+18.7928564453125
+18.264802734375003
+[3.6407760620117187, 4.081327209472656, 4.322921142578125, 2.6573309326171874, 3.540166320800781]
+<class 'list'>
+5
+3.6407760620117187
+3.6485043334960934
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:03] my_main Recent Stats | t_env:     358343 | Episode:     7168
+agent_grad_norm:           1.3693	critic_grad_norm:        515.6608	critic_loss:              29.0470	entropy:                   0.4873
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -18.4041	q_t_mean:                 18.5015
+return_mean:               0.0026	return_std:                0.0206	target_mean:              18.2648	td_error_abs:              3.6485
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:04] my_main t_env: 359943 / 2050000
+[INFO 00:07:04] my_main Estimated time left: 4 minutes, 25 seconds. Time passed: 55 seconds
+[tensor(1.4358, device='cuda:0'), tensor(2.0538, device='cuda:0'), tensor(0.6409, device='cuda:0'), tensor(0.2340, device='cuda:0'), tensor(1.4277, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.4358, device='cuda:0')
+1.1584489
+[tensor(470.1049, device='cuda:0'), tensor(198.7564, device='cuda:0'), tensor(739.9377, device='cuda:0'), tensor(182.4218, device='cuda:0'), tensor(106.5178, device='cuda:0')]
+<class 'list'>
+5
+tensor(470.1049, device='cuda:0')
+339.54773
+[25.93628692626953, 23.504478454589844, 26.314342498779297, 23.75458335876465, 22.88650894165039]
+<class 'list'>
+5
+25.93628692626953
+24.479240036010744
+[0.585719883441925, 0.6726908683776855, 0.6122428178787231, 0.5906322598457336, 0.5921077132225037]
+<class 'list'>
+5
+0.585719883441925
+0.6106787085533142
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-18.460006713867188, -19.28074073791504, -18.813148498535156, -19.406620025634766, -16.65374755859375]
+<class 'list'>
+5
+-18.460006713867188
+-18.52285270690918
+[18.120360107421874, 19.70524169921875, 20.01971435546875, 18.02737060546875, 17.769952392578126]
+<class 'list'>
+5
+18.120360107421874
+18.72852783203125
+[0.0018601190476190475, 0.0, 0.002232142857142857, 0.002232142857142857, 0.004464285714285714]
+<class 'list'>
+5
+0.0018601190476190475
+0.0021577380952380954
+[0.019989140821442986, 0.0, 0.03333300116756267, 0.03333300116756267, 0.041426818175818614]
+<class 'list'>
+5
+0.019989140821442986
+0.02561639226647739
+[19.61567626953125, 19.43140625, 17.9907177734375, 18.60909912109375, 17.689395751953125]
+<class 'list'>
+5
+19.61567626953125
+18.667259033203123
+[3.896134033203125, 3.148721923828125, 3.1628863525390627, 3.417471923828125, 3.1542138671875]
+<class 'list'>
+5
+3.896134033203125
+3.3558856201171876
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:11] my_main Recent Stats | t_env:     409543 | Episode:     8192
+agent_grad_norm:           1.1584	critic_grad_norm:        339.5477	critic_loss:              24.4792	entropy:                   0.6107
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -18.5229	q_t_mean:                 18.7285
+return_mean:               0.0022	return_std:                0.0256	target_mean:              18.6673	td_error_abs:              3.3559
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:11] my_main t_env: 411143 / 2050000
+[INFO 00:07:11] my_main Estimated time left: 4 minutes, 9 seconds. Time passed: 1 minutes, 3 seconds
+[tensor(0.8308, device='cuda:0'), tensor(2.1524, device='cuda:0'), tensor(4.3235, device='cuda:0'), tensor(1.0915, device='cuda:0'), tensor(1.8685, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.8308, device='cuda:0')
+2.0533526
+[tensor(215.1473, device='cuda:0'), tensor(162.8147, device='cuda:0'), tensor(1018.1375, device='cuda:0'), tensor(85.9863, device='cuda:0'), tensor(274.3705, device='cuda:0')]
+<class 'list'>
+5
+tensor(215.1473, device='cuda:0')
+351.29126
+[23.803749084472656, 19.345701217651367, 32.304622650146484, 24.868581771850586, 33.525901794433594]
+<class 'list'>
+5
+23.803749084472656
+26.769711303710938
+[0.6777690052986145, 0.7664530873298645, 0.7430659532546997, 0.7859838604927063, 0.783301830291748]
+<class 'list'>
+5
+0.6777690052986145
+0.7513147473335267
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-20.06797981262207, -16.584915161132812, -22.679927825927734, -21.10125732421875, -22.37710952758789]
+<class 'list'>
+5
+-20.06797981262207
+-20.56223793029785
+[18.580328369140624, 17.09720947265625, 23.157646484375, 20.60689453125, 22.53722412109375]
+<class 'list'>
+5
+18.580328369140624
+20.395860595703123
+[0.0020089285714285717, 0.0031249999999999997, 0.0, 0.0020089285714285717, 0.0033482142857142855]
+<class 'list'>
+5
+0.0020089285714285717
+0.0020982142857142857
+[0.02129679533895144, 0.02808639325565159, 0.0, 0.02129679533895144, 0.04999950175134402]
+<class 'list'>
+5
+0.02129679533895144
+0.0241358971369797
+[19.3166357421875, 17.6691845703125, 20.54583984375, 20.4692431640625, 23.32276611328125]
+<class 'list'>
+5
+19.3166357421875
+20.26473388671875
+[3.438206787109375, 3.094468078613281, 3.1479531860351564, 3.1655453491210936, 4.123477172851563]
+<class 'list'>
+5
+3.438206787109375
+3.3939301147460936
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:19] my_main Recent Stats | t_env:     460743 | Episode:     9216
+agent_grad_norm:           2.0534	critic_grad_norm:        351.2913	critic_loss:              26.7697	entropy:                   0.7513
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -20.5622	q_t_mean:                 20.3959
+return_mean:               0.0021	return_std:                0.0241	target_mean:              20.2647	td_error_abs:              3.3939
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:19] my_main t_env: 462343 / 2050000
+[INFO 00:07:19] my_main Estimated time left: 4 minutes, 4 seconds. Time passed: 1 minutes, 11 seconds
+[tensor(1.8685, device='cuda:0'), tensor(2.4280, device='cuda:0'), tensor(2.8517, device='cuda:0'), tensor(1.8613, device='cuda:0'), tensor(2.4851, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.8685, device='cuda:0')
+2.2989419
+[tensor(274.3705, device='cuda:0'), tensor(133.7624, device='cuda:0'), tensor(298.0916, device='cuda:0'), tensor(370.9391, device='cuda:0'), tensor(203.1708, device='cuda:0')]
+<class 'list'>
+5
+tensor(274.3705, device='cuda:0')
+256.06686
+[33.525901794433594, 26.48934555053711, 21.67049789428711, 27.493276596069336, 22.557933807373047]
+<class 'list'>
+5
+33.525901794433594
+26.34739112854004
+[0.783301830291748, 0.7661312222480774, 0.7830438017845154, 0.7896363735198975, 0.7959802150726318]
+<class 'list'>
+5
+0.783301830291748
+0.783618688583374
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-22.37710952758789, -20.804006576538086, -17.245914459228516, -22.09730339050293, -19.62534523010254]
+<class 'list'>
+5
+-22.37710952758789
+-20.42993583679199
+[22.53722412109375, 21.1021142578125, 17.063970947265624, 21.55530029296875, 19.632900390625]
+<class 'list'>
+5
+22.53722412109375
+20.378302001953124
+[0.0033482142857142855, 0.0023915816326530613, 0.0, 0.0008928571428571429, 0.0011160714285714285]
+<class 'list'>
+5
+0.0033482142857142855
+0.0015497448979591836
+[0.04999950175134402, 0.02525331030414983, 0.0, 0.01333320046702507, 0.016666500583781337]
+<class 'list'>
+5
+0.04999950175134402
+0.021050502621260053
+[23.32276611328125, 21.4881884765625, 18.096708984375, 20.69638916015625, 19.1670654296875]
+<class 'list'>
+5
+23.32276611328125
+20.554223632812498
+[4.123477172851563, 3.4653948974609374, 3.4808056640625, 2.9188250732421874, 2.7850506591796873]
+<class 'list'>
+5
+4.123477172851563
+3.354710693359375
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:27] my_main Recent Stats | t_env:     511943 | Episode:    10240
+agent_grad_norm:           2.2989	critic_grad_norm:        256.0669	critic_loss:              26.3474	entropy:                   0.7836
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -20.4299	q_t_mean:                 20.3783
+return_mean:               0.0015	return_std:                0.0211	target_mean:              20.5542	td_error_abs:              3.3547
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:27] my_main t_env: 513543 / 2050000
+[INFO 00:07:27] my_main Estimated time left: 3 minutes, 55 seconds. Time passed: 1 minutes, 19 seconds
+[tensor(1.5154, device='cuda:0'), tensor(1.6722, device='cuda:0'), tensor(2.0876, device='cuda:0'), tensor(2.5965, device='cuda:0'), tensor(2.1571, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.5154, device='cuda:0')
+2.005773
+[tensor(313.2502, device='cuda:0'), tensor(349.6086, device='cuda:0'), tensor(143.7335, device='cuda:0'), tensor(104.4129, device='cuda:0'), tensor(364.5315, device='cuda:0')]
+<class 'list'>
+5
+tensor(313.2502, device='cuda:0')
+255.10733
+[25.28850555419922, 26.219032287597656, 24.69012451171875, 20.998619079589844, 23.639799118041992]
+<class 'list'>
+5
+25.28850555419922
+24.167216110229493
+[0.7670581340789795, 0.7423355579376221, 0.547854483127594, 0.4904758334159851, 0.6663586497306824]
+<class 'list'>
+5
+0.7670581340789795
+0.6428165316581727
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-21.250598907470703, -19.83177947998047, -19.98360252380371, -18.39070701599121, -20.83249855041504]
+<class 'list'>
+5
+-21.250598907470703
+-20.057837295532227
+[20.7782177734375, 19.95614013671875, 20.087337646484375, 17.745166015625, 20.6362109375]
+<class 'list'>
+5
+20.7782177734375
+19.840614501953123
+[0.002232142857142857, 0.003720238095238095, 0.003720238095238095, 0.0017857142857142859, 0.004464285714285714]
+<class 'list'>
+5
+0.002232142857142857
+0.0031845238095238094
+[0.019158323198785316, 0.024621119207997467, 0.02814625047526449, 0.018813667415808467, 0.03831664639757063]
+<class 'list'>
+5
+0.019158323198785316
+0.025811201339085273
+[20.06951171875, 20.956162109375, 20.59620361328125, 18.08245361328125, 19.743580322265625]
+<class 'list'>
+5
+20.06951171875
+19.889582275390627
+[2.9527902221679687, 3.7892160034179687, 3.412558898925781, 3.112779235839844, 2.7348114013671876]
+<class 'list'>
+5
+2.9527902221679687
+3.20043115234375
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:35] my_main Recent Stats | t_env:     563143 | Episode:    11264
+agent_grad_norm:           2.0058	critic_grad_norm:        255.1073	critic_loss:              24.1672	entropy:                   0.6428
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -20.0578	q_t_mean:                 19.8406
+return_mean:               0.0032	return_std:                0.0258	target_mean:              19.8896	td_error_abs:              3.2004
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:35] my_main t_env: 564743 / 2050000
+[INFO 00:07:35] my_main Estimated time left: 3 minutes, 48 seconds. Time passed: 1 minutes, 27 seconds
+[tensor(2.1571, device='cuda:0'), tensor(2.0354, device='cuda:0'), tensor(1.0009, device='cuda:0'), tensor(0.5681, device='cuda:0'), tensor(0.4071, device='cuda:0')]
+<class 'list'>
+5
+tensor(2.1571, device='cuda:0')
+1.233731
+[tensor(364.5315, device='cuda:0'), tensor(693.5649, device='cuda:0'), tensor(202.4470, device='cuda:0'), tensor(573.3832, device='cuda:0'), tensor(421.0248, device='cuda:0')]
+<class 'list'>
+5
+tensor(364.5315, device='cuda:0')
+450.99033
+[23.639799118041992, 30.328447341918945, 26.232900619506836, 33.0959358215332, 28.857067108154297]
+<class 'list'>
+5
+23.639799118041992
+28.430830001831055
+[0.6663586497306824, 0.6261905431747437, 0.3674657344818115, 0.2110259234905243, 0.1281283050775528]
+<class 'list'>
+5
+0.6663586497306824
+0.3998338311910629
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-20.83249855041504, -19.04781723022461, -19.736351013183594, -19.64126205444336, -20.361839294433594]
+<class 'list'>
+5
+-20.83249855041504
+-19.92395362854004
+[20.6362109375, 18.23921875, 21.166884765625, 21.0286279296875, 19.33158203125]
+<class 'list'>
+5
+20.6362109375
+20.080504882812498
+[0.004464285714285714, 0.003596230158730159, 0.0, 0.0, 0.0011160714285714285]
+<class 'list'>
+5
+0.004464285714285714
+0.00183531746031746
+[0.03831664639757063, 0.03134605693882295, 0.0, 0.0, 0.016666500583781337]
+<class 'list'>
+5
+0.03831664639757063
+0.01726584078403498
+[19.743580322265625, 20.58591796875, 20.90713623046875, 19.6120361328125, 20.75017822265625]
+<class 'list'>
+5
+19.743580322265625
+20.319769775390625
+[2.7348114013671876, 4.530692138671875, 3.437806396484375, 3.7578079223632814, 4.10898681640625]
+<class 'list'>
+5
+2.7348114013671876
+3.714020935058594
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:43] my_main Recent Stats | t_env:     614343 | Episode:    12288
+agent_grad_norm:           1.2337	critic_grad_norm:        450.9903	critic_loss:              28.4308	entropy:                   0.3998
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -19.9240	q_t_mean:                 20.0805
+return_mean:               0.0018	return_std:                0.0173	target_mean:              20.3198	td_error_abs:              3.7140
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:43] my_main t_env: 615943 / 2050000
+[INFO 00:07:43] my_main Estimated time left: 3 minutes, 40 seconds. Time passed: 1 minutes, 35 seconds
+[INFO 00:07:47] my_main Updated target network
+[tensor(0.9895, device='cuda:0'), tensor(0.6178, device='cuda:0'), tensor(1.2773, device='cuda:0'), tensor(2.7686, device='cuda:0'), tensor(0.6757, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.9895, device='cuda:0')
+1.265782
+[tensor(214.7666, device='cuda:0'), tensor(379.5068, device='cuda:0'), tensor(211.3751, device='cuda:0'), tensor(371.8556, device='cuda:0'), tensor(105.8394, device='cuda:0')]
+<class 'list'>
+5
+tensor(214.7666, device='cuda:0')
+256.66867
+[22.416994094848633, 26.674463272094727, 22.8968448638916, 17.87841033935547, 12.218928337097168]
+<class 'list'>
+5
+22.416994094848633
+20.41712818145752
+[0.11836519837379456, 0.14796926081180573, 0.20164687931537628, 0.3261539041996002, 0.6557357311248779]
+<class 'list'>
+5
+0.11836519837379456
+0.28997419476509095
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-16.077322006225586, -19.608848571777344, -18.19391632080078, -15.791293144226074, -14.697924613952637]
+<class 'list'>
+5
+-16.077322006225586
+-16.873860931396486
+[16.822327880859376, 19.0190673828125, 17.9784130859375, 15.222879638671875, 15.405]
+<class 'list'>
+5
+16.822327880859376
+16.88953759765625
+[0.0, 0.0017857142857142859, 0.0, 0.0006377551020408163, 0.000744047619047619]
+<class 'list'>
+5
+0.0
+0.0006335034013605442
+[0.0, 0.018813667415808467, 0.0, 0.009523714619303621, 0.011111000389187558]
+<class 'list'>
+5
+0.0
+0.00788967648485993
+[16.65551513671875, 17.94210693359375, 18.8104443359375, 16.773916015625, 15.09992431640625]
+<class 'list'>
+5
+16.65551513671875
+17.05638134765625
+[3.3358258056640624, 3.405438232421875, 3.4174755859375, 3.4545883178710937, 2.061941375732422]
+<class 'list'>
+5
+3.3358258056640624
+3.1350538635253904
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:51] my_main Recent Stats | t_env:     665543 | Episode:    13312
+agent_grad_norm:           1.2658	critic_grad_norm:        256.6687	critic_loss:              20.4171	entropy:                   0.2900
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.8739	q_t_mean:                 16.8895
+return_mean:               0.0006	return_std:                0.0079	target_mean:              17.0564	td_error_abs:              3.1351
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:51] my_main t_env: 667143 / 2050000
+[INFO 00:07:51] my_main Estimated time left: 3 minutes, 40 seconds. Time passed: 1 minutes, 43 seconds
+[tensor(0.6757, device='cuda:0'), tensor(0.2111, device='cuda:0'), tensor(1.1747, device='cuda:0'), tensor(0.5612, device='cuda:0'), tensor(0.2556, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.6757, device='cuda:0')
+0.5756401
+[tensor(105.8394, device='cuda:0'), tensor(46.3344, device='cuda:0'), tensor(99.1106, device='cuda:0'), tensor(218.8970, device='cuda:0'), tensor(161.6127, device='cuda:0')]
+<class 'list'>
+5
+tensor(105.8394, device='cuda:0')
+126.35881
+[12.218928337097168, 17.244577407836914, 22.8035945892334, 16.352632522583008, 15.860224723815918]
+<class 'list'>
+5
+12.218928337097168
+16.89599151611328
+[0.6557357311248779, 0.9164695143699646, 0.9220771789550781, 0.8238391280174255, 0.7525652050971985]
+<class 'list'>
+5
+0.6557357311248779
+0.8141373515129089
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.697924613952637, -17.57198715209961, -20.522275924682617, -17.054275512695312, -17.526681900024414]
+<class 'list'>
+5
+-14.697924613952637
+-17.47462902069092
+[15.405, 17.229493408203126, 20.5001220703125, 17.222059326171873, 17.229154052734376]
+<class 'list'>
+5
+15.405
+17.517165771484375
+[0.000744047619047619, 0.006898384353741496, 0.005792942176870748, 0.0055272108843537416, 0.0039115646258503405]
+<class 'list'>
+5
+0.000744047619047619
+0.004574829931972789
+[0.011111000389187558, 0.043099935379144305, 0.03951534220516235, 0.041114187401240294, 0.03047920827502769]
+<class 'list'>
+5
+0.011111000389187558
+0.033063934729952435
+[15.09992431640625, 17.375853271484374, 20.284044189453127, 16.58974365234375, 16.722427978515626]
+<class 'list'>
+5
+15.09992431640625
+17.214398681640624
+[2.061941375732422, 2.72365478515625, 3.002752685546875, 2.4732284545898438, 2.3094622802734377]
+<class 'list'>
+5
+2.061941375732422
+2.5142079162597657
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:07:59] my_main Recent Stats | t_env:     716743 | Episode:    14336
+agent_grad_norm:           0.5756	critic_grad_norm:        126.3588	critic_loss:              16.8960	entropy:                   0.8141
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -17.4746	q_t_mean:                 17.5172
+return_mean:               0.0046	return_std:                0.0331	target_mean:              17.2144	td_error_abs:              2.5142
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:07:59] my_main t_env: 718343 / 2050000
+[INFO 00:07:59] my_main Estimated time left: 3 minutes, 25 seconds. Time passed: 1 minutes, 51 seconds
+[tensor(0.7250, device='cuda:0'), tensor(0.8223, device='cuda:0'), tensor(0.8023, device='cuda:0'), tensor(0.3071, device='cuda:0'), tensor(0.0631, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.7250, device='cuda:0')
+0.5439405
+[tensor(113.9466, device='cuda:0'), tensor(113.4147, device='cuda:0'), tensor(99.5954, device='cuda:0'), tensor(95.1485, device='cuda:0'), tensor(30.9482, device='cuda:0')]
+<class 'list'>
+5
+tensor(113.9466, device='cuda:0')
+90.61067
+[13.986440658569336, 16.570371627807617, 17.05385971069336, 17.009357452392578, 11.407642364501953]
+<class 'list'>
+5
+13.986440658569336
+15.205534362792969
+[0.7250703573226929, 0.7839685082435608, 0.8551335334777832, 0.7729031443595886, 0.6404699683189392]
+<class 'list'>
+5
+0.7250703573226929
+0.755509102344513
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.555323600769043, -17.263671875, -16.88359260559082, -17.255170822143555, -15.29592514038086]
+<class 'list'>
+5
+-15.555323600769043
+-16.450736808776856
+[15.21236572265625, 16.95888427734375, 16.95939453125, 17.46892333984375, 15.252589111328126]
+<class 'list'>
+5
+15.21236572265625
+16.370431396484374
+[0.0016741071428571428, 0.004836309523809523, 0.000744047619047619, 0.0, 0.0021683673469387755]
+<class 'list'>
+5
+0.0016741071428571428
+0.0018845663265306123
+[0.01860026039341402, 0.04321725514115793, 0.011111000389187558, 0.0, 0.023201316740664196]
+<class 'list'>
+5
+0.01860026039341402
+0.01922596653288474
+[15.71529052734375, 17.40337158203125, 17.34100341796875, 17.771842041015624, 15.301156005859376]
+<class 'list'>
+5
+15.71529052734375
+16.706532714843753
+[2.6307501220703124, 2.807347412109375, 2.910433349609375, 2.79294189453125, 2.1230654907226563]
+<class 'list'>
+5
+2.6307501220703124
+2.652907653808594
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:07] my_main Recent Stats | t_env:     767943 | Episode:    15360
+agent_grad_norm:           0.5439	critic_grad_norm:         90.6107	critic_loss:              15.2055	entropy:                   0.7555
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.4507	q_t_mean:                 16.3704
+return_mean:               0.0019	return_std:                0.0192	target_mean:              16.7065	td_error_abs:              2.6529
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:07] my_main t_env: 769543 / 2050000
+[INFO 00:08:07] my_main Estimated time left: 3 minutes, 25 seconds. Time passed: 1 minutes, 59 seconds
+[tensor(0.7240, device='cuda:0'), tensor(0.3771, device='cuda:0'), tensor(0.6407, device='cuda:0'), tensor(0.1578, device='cuda:0'), tensor(0.0842, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.7240, device='cuda:0')
+0.396764
+[tensor(151.7138, device='cuda:0'), tensor(136.2270, device='cuda:0'), tensor(226.2534, device='cuda:0'), tensor(89.5763, device='cuda:0'), tensor(194.3626, device='cuda:0')]
+<class 'list'>
+5
+tensor(151.7138, device='cuda:0')
+159.62663
+[14.868517875671387, 16.17425537109375, 13.943612098693848, 15.641792297363281, 16.61347007751465]
+<class 'list'>
+5
+14.868517875671387
+15.448329544067382
+[0.6344906687736511, 0.6896668076515198, 0.7306267023086548, 0.7550346255302429, 0.7950790524482727]
+<class 'list'>
+5
+0.6344906687736511
+0.7209795713424683
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.730347633361816, -17.678232192993164, -17.178558349609375, -16.67290496826172, -15.87508487701416]
+<class 'list'>
+5
+-15.730347633361816
+-16.627025604248047
+[15.616954345703125, 18.067919921875, 16.692923583984374, 16.149892578125, 16.7256591796875]
+<class 'list'>
+5
+15.616954345703125
+16.650669921875
+[0.00234375, 0.0, 0.001488095238095238, 0.0031249999999999997, 0.0]
+<class 'list'>
+5
+0.00234375
+0.0013913690476190475
+[0.02790245534910734, 0.0, 0.022222000778375117, 0.026959998476579018, 0.0]
+<class 'list'>
+5
+0.02790245534910734
+0.015416890920812294
+[16.23844970703125, 17.6890380859375, 16.03419189453125, 16.569652099609375, 16.22875]
+<class 'list'>
+5
+16.23844970703125
+16.552016357421873
+[2.834833984375, 2.373257751464844, 2.2382835388183593, 2.740977783203125, 2.677957763671875]
+<class 'list'>
+5
+2.834833984375
+2.5730621643066405
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:15] my_main Recent Stats | t_env:     819143 | Episode:    16384
+agent_grad_norm:           0.3968	critic_grad_norm:        159.6266	critic_loss:              15.4483	entropy:                   0.7210
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.6270	q_t_mean:                 16.6507
+return_mean:               0.0014	return_std:                0.0154	target_mean:              16.5520	td_error_abs:              2.5731
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:15] my_main t_env: 820743 / 2050000
+[INFO 00:08:15] my_main Estimated time left: 3 minutes, 9 seconds. Time passed: 2 minutes, 7 seconds
+[tensor(0.0842, device='cuda:0'), tensor(0.7328, device='cuda:0'), tensor(1.1646, device='cuda:0'), tensor(1.1678, device='cuda:0'), tensor(0.2092, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.0842, device='cuda:0')
+0.6717392
+[tensor(194.3626, device='cuda:0'), tensor(36.8352, device='cuda:0'), tensor(157.1891, device='cuda:0'), tensor(59.6445, device='cuda:0'), tensor(41.5976, device='cuda:0')]
+<class 'list'>
+5
+tensor(194.3626, device='cuda:0')
+97.92582
+[16.61347007751465, 13.905278205871582, 14.413799285888672, 13.144853591918945, 12.445151329040527]
+<class 'list'>
+5
+16.61347007751465
+14.104510498046874
+[0.7950790524482727, 0.8151171803474426, 0.7584999799728394, 0.7732843160629272, 0.6346443295478821]
+<class 'list'>
+5
+0.7950790524482727
+0.7553249716758728
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.87508487701416, -16.704092025756836, -16.150327682495117, -15.949332237243652, -16.304292678833008]
+<class 'list'>
+5
+-15.87508487701416
+-16.196625900268554
+[16.7256591796875, 16.197049560546876, 15.802314453125, 15.82958984375, 16.08852294921875]
+<class 'list'>
+5
+16.7256591796875
+16.128627197265626
+[0.0, 0.0031249999999999997, 0.0, 0.000744047619047619, 0.0]
+<class 'list'>
+5
+0.0
+0.0007738095238095237
+[0.0, 0.02808639325565159, 0.0, 0.011111000389187558, 0.0]
+<class 'list'>
+5
+0.0
+0.007839478728967831
+[16.22875, 16.30543701171875, 16.42782958984375, 15.6549072265625, 16.2665234375]
+<class 'list'>
+5
+16.22875
+16.176689453125
+[2.677957763671875, 2.386590881347656, 2.6935211181640626, 2.2989273071289062, 2.228544006347656]
+<class 'list'>
+5
+2.677957763671875
+2.457108215332031
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:23] my_main Recent Stats | t_env:     870343 | Episode:    17408
+agent_grad_norm:           0.6717	critic_grad_norm:         97.9258	critic_loss:              14.1045	entropy:                   0.7553
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.1966	q_t_mean:                 16.1286
+return_mean:               0.0008	return_std:                0.0078	target_mean:              16.1767	td_error_abs:              2.4571
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:23] my_main t_env: 871943 / 2050000
+[INFO 00:08:23] my_main Estimated time left: 3 minutes, 2 seconds. Time passed: 2 minutes, 15 seconds
+[tensor(0.4717, device='cuda:0'), tensor(0.1970, device='cuda:0'), tensor(0.0866, device='cuda:0'), tensor(0.1479, device='cuda:0'), tensor(0.5514, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.4717, device='cuda:0')
+0.29093766
+[tensor(148.9820, device='cuda:0'), tensor(90.6836, device='cuda:0'), tensor(146.4518, device='cuda:0'), tensor(130.5968, device='cuda:0'), tensor(162.0397, device='cuda:0')]
+<class 'list'>
+5
+tensor(148.9820, device='cuda:0')
+135.75078
+[14.451918601989746, 13.747203826904297, 13.965320587158203, 17.609907150268555, 17.368602752685547]
+<class 'list'>
+5
+14.451918601989746
+15.42859058380127
+[0.5454696416854858, 0.5646061897277832, 0.6214814782142639, 0.6696699261665344, 0.7349973320960999]
+<class 'list'>
+5
+0.5454696416854858
+0.6272449135780335
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.695910453796387, -17.020524978637695, -15.812836647033691, -18.537691116333008, -17.23666763305664]
+<class 'list'>
+5
+-15.695910453796387
+-16.860726165771485
+[15.976539306640625, 17.0750048828125, 16.273359375, 18.120977783203124, 17.23010986328125]
+<class 'list'>
+5
+15.976539306640625
+16.9351982421875
+[0.0062499999999999995, 0.0030187074829931973, 0.0027636054421768708, 0.014328231292517006, 0.001753826530612245]
+<class 'list'>
+5
+0.0062499999999999995
+0.005622874149659863
+[0.035329023209712165, 0.022551775505257648, 0.029203179927401447, 0.06758956533584112, 0.019158544343542763]
+<class 'list'>
+5
+0.035329023209712165
+0.034766417664351026
+[16.70126220703125, 16.69158203125, 15.61966552734375, 18.022705078125, 17.918248291015626]
+<class 'list'>
+5
+16.70126220703125
+16.990692626953127
+[2.6941574096679686, 2.121107482910156, 2.340128173828125, 2.7058111572265626, 2.9403652954101562]
+<class 'list'>
+5
+2.6941574096679686
+2.560313903808594
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:31] my_main Recent Stats | t_env:     921543 | Episode:    18432
+agent_grad_norm:           0.2909	critic_grad_norm:        135.7508	critic_loss:              15.4286	entropy:                   0.6272
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.8607	q_t_mean:                 16.9352
+return_mean:               0.0056	return_std:                0.0348	target_mean:              16.9907	td_error_abs:              2.5603
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:31] my_main t_env: 923143 / 2050000
+[INFO 00:08:31] my_main Estimated time left: 2 minutes, 58 seconds. Time passed: 2 minutes, 23 seconds
+[INFO 00:08:37] my_main Updated target network
+[tensor(0.5514, device='cuda:0'), tensor(0.1666, device='cuda:0'), tensor(0.2623, device='cuda:0'), tensor(0.4333, device='cuda:0'), tensor(0.5191, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.5514, device='cuda:0')
+0.38654754
+[tensor(162.0397, device='cuda:0'), tensor(128.7253, device='cuda:0'), tensor(89.0684, device='cuda:0'), tensor(120.4810, device='cuda:0'), tensor(413.0934, device='cuda:0')]
+<class 'list'>
+5
+tensor(162.0397, device='cuda:0')
+182.68156
+[17.368602752685547, 15.61498737335205, 17.196348190307617, 17.647384643554688, 15.41231918334961]
+<class 'list'>
+5
+17.368602752685547
+16.6479284286499
+[0.7349973320960999, 0.7136033773422241, 0.666050136089325, 0.660784900188446, 0.7097753286361694]
+<class 'list'>
+5
+0.7349973320960999
+0.6970422148704529
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-17.23666763305664, -16.48724365234375, -17.44170379638672, -17.237083435058594, -16.033191680908203]
+<class 'list'>
+5
+-17.23666763305664
+-16.887178039550783
+[17.23010986328125, 16.8582958984375, 17.069208984375, 17.106270751953126, 16.61322998046875]
+<class 'list'>
+5
+17.23010986328125
+16.975423095703125
+[0.001753826530612245, 0.008035714285714287, 0.010289115646258503, 0.014806547619047618, 0.03903061224489796]
+<class 'list'>
+5
+0.001753826530612245
+0.014783163265306121
+[0.019158544343542763, 0.04607523516943096, 0.04711920304080995, 0.06439786946824654, 0.12136075751750575]
+<class 'list'>
+5
+0.019158544343542763
+0.05962232190790719
+[17.918248291015626, 16.355343017578125, 17.0206640625, 17.66605712890625, 14.81485107421875]
+<class 'list'>
+5
+17.918248291015626
+16.75503271484375
+[2.9403652954101562, 2.3537152099609373, 2.691807861328125, 2.935824279785156, 2.1186033630371095]
+<class 'list'>
+5
+2.9403652954101562
+2.608063201904297
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:39] my_main Recent Stats | t_env:     972743 | Episode:    19456
+agent_grad_norm:           0.3865	critic_grad_norm:        182.6816	critic_loss:              16.6479	entropy:                   0.6970
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.8872	q_t_mean:                 16.9754
+return_mean:               0.0148	return_std:                0.0596	target_mean:              16.7550	td_error_abs:              2.6081
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:39] my_main t_env: 974343 / 2050000
+[INFO 00:08:39] my_main Estimated time left: 2 minutes, 48 seconds. Time passed: 2 minutes, 31 seconds
+[tensor(1.0922, device='cuda:0'), tensor(0.6379, device='cuda:0'), tensor(0.7973, device='cuda:0'), tensor(0.8954, device='cuda:0'), tensor(0.6388, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.0922, device='cuda:0')
+0.81233424
+[tensor(161.7093, device='cuda:0'), tensor(40.6880, device='cuda:0'), tensor(88.1554, device='cuda:0'), tensor(122.5661, device='cuda:0'), tensor(45.1789, device='cuda:0')]
+<class 'list'>
+5
+tensor(161.7093, device='cuda:0')
+91.659546
+[11.458586692810059, 12.281233787536621, 13.297707557678223, 15.434220314025879, 17.992860794067383]
+<class 'list'>
+5
+11.458586692810059
+14.092921829223632
+[0.8559730052947998, 1.0349273681640625, 1.1601179838180542, 1.2306386232376099, 1.0893467664718628]
+<class 'list'>
+5
+0.8559730052947998
+1.0742007493972778
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-12.709334373474121, -14.187665939331055, -15.220638275146484, -15.96948528289795, -17.537139892578125]
+<class 'list'>
+5
+-12.709334373474121
+-15.124852752685547
+[12.2907470703125, 14.3226123046875, 15.50119873046875, 16.01224365234375, 17.236796875]
+<class 'list'>
+5
+12.2907470703125
+15.0727197265625
+[0.00584608843537415, 0.01883503401360544, 0.024043367346938772, 0.024613803854875282, 0.014512471655328799]
+<class 'list'>
+5
+0.00584608843537415
+0.01757015306122449
+[0.0360140318043574, 0.058400912343416225, 0.081525867190234, 0.08569484509864167, 0.053655706422338856]
+<class 'list'>
+5
+0.0360140318043574
+0.06305827257179764
+[13.18637939453125, 14.513841552734375, 15.19379638671875, 15.66871826171875, 17.439285888671876]
+<class 'list'>
+5
+13.18637939453125
+15.200404296875002
+[2.566834716796875, 2.296325988769531, 2.2377000427246094, 2.3987631225585937, 2.773900146484375]
+<class 'list'>
+5
+2.566834716796875
+2.4547048034667966
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:47] my_main Recent Stats | t_env:    1023943 | Episode:    20480
+agent_grad_norm:           0.8123	critic_grad_norm:         91.6595	critic_loss:              14.0929	entropy:                   1.0742
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.1249	q_t_mean:                 15.0727
+return_mean:               0.0176	return_std:                0.0631	target_mean:              15.2004	td_error_abs:              2.4547
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:47] my_main t_env: 1025543 / 2050000
+[INFO 00:08:47] my_main Estimated time left: 2 minutes, 38 seconds. Time passed: 2 minutes, 39 seconds
+[tensor(0.6388, device='cuda:0'), tensor(0.4958, device='cuda:0'), tensor(0.4065, device='cuda:0'), tensor(0.3112, device='cuda:0'), tensor(0.8353, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.6388, device='cuda:0')
+0.5375303
+[tensor(45.1789, device='cuda:0'), tensor(33.3346, device='cuda:0'), tensor(67.1269, device='cuda:0'), tensor(65.5731, device='cuda:0'), tensor(156.2404, device='cuda:0')]
+<class 'list'>
+5
+tensor(45.1789, device='cuda:0')
+73.49079
+[17.992860794067383, 12.04614543914795, 15.733659744262695, 13.545601844787598, 16.7934627532959]
+<class 'list'>
+5
+17.992860794067383
+15.222346115112305
+[1.0893467664718628, 1.026987910270691, 0.8331778645515442, 0.827411413192749, 1.022323489189148]
+<class 'list'>
+5
+1.0893467664718628
+0.9598494887351989
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-17.537139892578125, -15.109614372253418, -14.94378662109375, -15.261202812194824, -16.161775588989258]
+<class 'list'>
+5
+-17.537139892578125
+-15.802703857421875
+[17.236796875, 14.91091796875, 15.3796240234375, 15.062901611328124, 15.559698486328125]
+<class 'list'>
+5
+17.236796875
+15.629987792968752
+[0.014512471655328799, 0.006335034013605442, 0.011840986394557823, 0.0020089285714285717, 0.006845238095238094]
+<class 'list'>
+5
+0.014512471655328799
+0.008308531746031746
+[0.053655706422338856, 0.0358692126792395, 0.059822346442199, 0.021296795338951444, 0.04797763054674354]
+<class 'list'>
+5
+0.053655706422338856
+0.04372433828589447
+[17.439285888671876, 15.0545703125, 15.3425439453125, 14.86795654296875, 16.18024169921875]
+<class 'list'>
+5
+17.439285888671876
+15.776919677734375
+[2.773900146484375, 2.245623779296875, 2.6889361572265624, 2.1888494873046875, 2.887740478515625]
+<class 'list'>
+5
+2.773900146484375
+2.557010009765625
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:08:55] my_main Recent Stats | t_env:    1075143 | Episode:    21504
+agent_grad_norm:           0.5375	critic_grad_norm:         73.4908	critic_loss:              15.2223	entropy:                   0.9598
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.8027	q_t_mean:                 15.6300
+return_mean:               0.0083	return_std:                0.0437	target_mean:              15.7769	td_error_abs:              2.5570
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:08:55] my_main t_env: 1076743 / 2050000
+[INFO 00:08:55] my_main Estimated time left: 2 minutes, 35 seconds. Time passed: 2 minutes, 47 seconds
+[tensor(1.3687, device='cuda:0'), tensor(0.9389, device='cuda:0'), tensor(2.1999, device='cuda:0'), tensor(1.7553, device='cuda:0'), tensor(0.4340, device='cuda:0')]
+<class 'list'>
+5
+tensor(1.3687, device='cuda:0')
+1.3393421
+[tensor(43.9585, device='cuda:0'), tensor(139.8354, device='cuda:0'), tensor(252.1496, device='cuda:0'), tensor(102.7873, device='cuda:0'), tensor(30.4708, device='cuda:0')]
+<class 'list'>
+5
+tensor(43.9585, device='cuda:0')
+113.840355
+[14.603540420532227, 19.88642120361328, 17.97492218017578, 14.719525337219238, 16.716217041015625]
+<class 'list'>
+5
+14.603540420532227
+16.780125236511232
+[1.041989803314209, 0.9116975665092468, 0.978168785572052, 0.798514723777771, 0.7403141856193542]
+<class 'list'>
+5
+1.041989803314209
+0.8941370129585267
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.183879852294922, -18.24935531616211, -18.025882720947266, -15.907567977905273, -16.99234962463379]
+<class 'list'>
+5
+-15.183879852294922
+-16.871807098388672
+[15.45169921875, 18.5598193359375, 18.004525146484376, 16.01983154296875, 16.385367431640624]
+<class 'list'>
+5
+15.45169921875
+16.884248535156253
+[0.011809098639455782, 0.002232142857142857, 0.008280187074829932, 0.01371173469387755, 0.00703656462585034]
+<class 'list'>
+5
+0.011809098639455782
+0.008613945578231292
+[0.05671534345170469, 0.03333300116756267, 0.04323807006761518, 0.07207596746360702, 0.04459281593666128]
+<class 'list'>
+5
+0.05671534345170469
+0.04999103961743017
+[15.724521484375, 18.11064453125, 16.9622802734375, 15.5759619140625, 16.438046875]
+<class 'list'>
+5
+15.724521484375
+16.562291015625
+[2.5536163330078123, 2.6589059448242187, 2.3740884399414064, 2.2548397827148436, 2.5911151123046876]
+<class 'list'>
+5
+2.5536163330078123
+2.486513122558594
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:03] my_main Recent Stats | t_env:    1126343 | Episode:    22528
+agent_grad_norm:           1.3393	critic_grad_norm:        113.8404	critic_loss:              16.7801	entropy:                   0.8941
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.8718	q_t_mean:                 16.8842
+return_mean:               0.0086	return_std:                0.0500	target_mean:              16.5623	td_error_abs:              2.4865
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:03] my_main t_env: 1127943 / 2050000
+[INFO 00:09:03] my_main Estimated time left: 2 minutes, 25 seconds. Time passed: 2 minutes, 55 seconds
+[tensor(0.9025, device='cuda:0'), tensor(2.1254, device='cuda:0'), tensor(0.4790, device='cuda:0'), tensor(1.2657, device='cuda:0'), tensor(0.9364, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.9025, device='cuda:0')
+1.141806
+[tensor(32.2386, device='cuda:0'), tensor(132.4715, device='cuda:0'), tensor(30.8588, device='cuda:0'), tensor(137.3555, device='cuda:0'), tensor(46.9774, device='cuda:0')]
+<class 'list'>
+5
+tensor(32.2386, device='cuda:0')
+75.98035
+[11.089591979980469, 15.863560676574707, 16.558420181274414, 17.76374053955078, 16.407800674438477]
+<class 'list'>
+5
+11.089591979980469
+15.53662281036377
+[0.8772698044776917, 0.9137720465660095, 0.8060800433158875, 0.8649437427520752, 0.9402743577957153]
+<class 'list'>
+5
+0.8772698044776917
+0.8804679989814759
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-13.209389686584473, -16.920494079589844, -17.06888198852539, -17.25407600402832, -15.811279296875]
+<class 'list'>
+5
+-13.209389686584473
+-16.052824211120605
+[13.535458984375, 16.61585205078125, 16.6166357421875, 16.90883056640625, 16.178597412109376]
+<class 'list'>
+5
+13.535458984375
+15.971074951171875
+[0.007068452380952379, 0.007674319727891156, 0.006335034013605441, 0.008035714285714285, 0.012255527210884354]
+<class 'list'>
+5
+0.007068452380952379
+0.008273809523809524
+[0.047044466435576145, 0.043535250655374814, 0.039174178884111774, 0.04202123794910748, 0.05408908494138679]
+<class 'list'>
+5
+0.047044466435576145
+0.0451728437731114
+[13.58603271484375, 16.11488037109375, 16.750079345703124, 17.65717529296875, 16.17478515625]
+<class 'list'>
+5
+13.58603271484375
+16.056590576171875
+[2.1553219604492186, 2.439606018066406, 2.5415524291992186, 2.9953353881835936, 2.5448211669921874]
+<class 'list'>
+5
+2.1553219604492186
+2.535327392578125
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:11] my_main Recent Stats | t_env:    1177543 | Episode:    23552
+agent_grad_norm:           1.1418	critic_grad_norm:         75.9803	critic_loss:              15.5366	entropy:                   0.8805
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.0528	q_t_mean:                 15.9711
+return_mean:               0.0083	return_std:                0.0452	target_mean:              16.0566	td_error_abs:              2.5353
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:11] my_main t_env: 1179143 / 2050000
+[INFO 00:09:11] my_main Estimated time left: 2 minutes, 15 seconds. Time passed: 3 minutes, 3 seconds
+[tensor(0.9364, device='cuda:0'), tensor(0.7800, device='cuda:0'), tensor(0.3522, device='cuda:0'), tensor(0.2574, device='cuda:0'), tensor(0.5529, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.9364, device='cuda:0')
+0.5757721
+[tensor(46.9774, device='cuda:0'), tensor(86.6288, device='cuda:0'), tensor(27.4315, device='cuda:0'), tensor(48.8757, device='cuda:0'), tensor(51.7026, device='cuda:0')]
+<class 'list'>
+5
+tensor(46.9774, device='cuda:0')
+52.323193
+[16.407800674438477, 16.58108139038086, 17.663536071777344, 17.18794822692871, 15.023669242858887]
+<class 'list'>
+5
+16.407800674438477
+16.572807121276856
+[0.9402743577957153, 1.102725863456726, 1.1423949003219604, 1.1775600910186768, 1.1052778959274292]
+<class 'list'>
+5
+0.9402743577957153
+1.0936466217041017
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.811279296875, -16.39221954345703, -17.349422454833984, -17.2893009185791, -15.459722518920898]
+<class 'list'>
+5
+-15.811279296875
+-16.460388946533204
+[16.178597412109376, 16.215628662109374, 17.2370263671875, 17.14034912109375, 15.544835205078124]
+<class 'list'>
+5
+16.178597412109376
+16.463287353515625
+[0.012255527210884354, 0.020248724489795915, 0.02185374149659864, 0.035097789115646254, 0.0278734410430839]
+<class 'list'>
+5
+0.012255527210884354
+0.023465844671201812
+[0.05408908494138679, 0.06600627946005799, 0.06527777162391922, 0.08619601900202244, 0.0863732553545481]
+<class 'list'>
+5
+0.05408908494138679
+0.0715884820763869
+[16.17478515625, 16.720732421875, 17.31421142578125, 17.465076904296875, 15.452451171875]
+<class 'list'>
+5
+16.17478515625
+16.625451416015625
+[2.5448211669921874, 2.8146798706054685, 2.737003173828125, 2.7528085327148437, 2.5225595092773436]
+<class 'list'>
+5
+2.5448211669921874
+2.674374450683594
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:19] my_main Recent Stats | t_env:    1228743 | Episode:    24576
+agent_grad_norm:           0.5758	critic_grad_norm:         52.3232	critic_loss:              16.5728	entropy:                   1.0936
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.4604	q_t_mean:                 16.4633
+return_mean:               0.0235	return_std:                0.0716	target_mean:              16.6255	td_error_abs:              2.6744
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:19] my_main t_env: 1230343 / 2050000
+[INFO 00:09:19] my_main Estimated time left: 2 minutes, 7 seconds. Time passed: 3 minutes, 11 seconds
+[INFO 00:09:27] my_main Updated target network
+[tensor(0.4450, device='cuda:0'), tensor(0.5597, device='cuda:0'), tensor(0.7698, device='cuda:0'), tensor(0.2219, device='cuda:0'), tensor(0.9258, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.4450, device='cuda:0')
+0.58444095
+[tensor(51.0588, device='cuda:0'), tensor(44.7282, device='cuda:0'), tensor(368.3000, device='cuda:0'), tensor(125.3174, device='cuda:0'), tensor(85.1730, device='cuda:0')]
+<class 'list'>
+5
+tensor(51.0588, device='cuda:0')
+134.9155
+[14.059028625488281, 14.4459228515625, 20.674545288085938, 18.20880889892578, 15.742467880249023]
+<class 'list'>
+5
+14.059028625488281
+16.626154708862305
+[0.9517349004745483, 0.9553687572479248, 0.8731784224510193, 0.7626386880874634, 0.8626630902290344]
+<class 'list'>
+5
+0.9517349004745483
+0.8811167716979981
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.486021041870117, -15.79738712310791, -19.08349609375, -16.704830169677734, -16.314346313476562]
+<class 'list'>
+5
+-15.486021041870117
+-16.677216148376466
+[15.676201171875, 15.799410400390625, 18.948887939453126, 16.531007080078126, 16.46531005859375]
+<class 'list'>
+5
+15.676201171875
+16.68416333007813
+[0.03276289682539683, 0.007865646258503401, 0.0037946428571428575, 0.008949829931972788, 0.008645124716553288]
+<class 'list'>
+5
+0.03276289682539683
+0.012403628117913833
+[0.09244248294662362, 0.04547282826473209, 0.028290154266880155, 0.04534676968143607, 0.043583791746925504]
+<class 'list'>
+5
+0.09244248294662362
+0.05102720538131948
+[15.45880859375, 16.11160888671875, 17.66738525390625, 17.2209716796875, 16.1313916015625]
+<class 'list'>
+5
+15.45880859375
+16.518033203125
+[2.260919647216797, 2.4348736572265626, 2.8715472412109375, 2.9999093627929687, 2.41732177734375]
+<class 'list'>
+5
+2.260919647216797
+2.596914337158203
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:27] my_main Recent Stats | t_env:    1279943 | Episode:    25600
+agent_grad_norm:           0.5844	critic_grad_norm:        134.9155	critic_loss:              16.6262	entropy:                   0.8811
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -16.6772	q_t_mean:                 16.6842
+return_mean:               0.0124	return_std:                0.0510	target_mean:              16.5180	td_error_abs:              2.5969
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:27] my_main t_env: 1281543 / 2050000
+[INFO 00:09:27] my_main Estimated time left: 1 minutes, 59 seconds. Time passed: 3 minutes, 19 seconds
+[tensor(0.9258, device='cuda:0'), tensor(0.7595, device='cuda:0'), tensor(0.5984, device='cuda:0'), tensor(1.9095, device='cuda:0'), tensor(0.2939, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.9258, device='cuda:0')
+0.8974417
+[tensor(85.1730, device='cuda:0'), tensor(75.9458, device='cuda:0'), tensor(80.5924, device='cuda:0'), tensor(158.6961, device='cuda:0'), tensor(184.5980, device='cuda:0')]
+<class 'list'>
+5
+tensor(85.1730, device='cuda:0')
+117.00105
+[15.742467880249023, 13.843618392944336, 12.398326873779297, 14.906817436218262, 14.951650619506836]
+<class 'list'>
+5
+15.742467880249023
+14.36857624053955
+[0.8626630902290344, 1.0130953788757324, 1.0009675025939941, 0.8965764045715332, 0.7591059803962708]
+<class 'list'>
+5
+0.8626630902290344
+0.906481671333313
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-16.314346313476562, -14.480927467346191, -15.14714527130127, -16.80583381652832, -15.37752628326416]
+<class 'list'>
+5
+-16.314346313476562
+-15.625155830383301
+[16.46531005859375, 14.55697021484375, 15.321883544921874, 16.697005615234374, 15.0231298828125]
+<class 'list'>
+5
+16.46531005859375
+15.61285986328125
+[0.008645124716553288, 0.03302508503401361, 0.0322172619047619, 0.019281462585034014, 0.009782454648526078]
+<class 'list'>
+5
+0.008645124716553288
+0.02059027777777778
+[0.043583791746925504, 0.08915541023647401, 0.09418284717003847, 0.07627941756860272, 0.05210696769184851]
+<class 'list'>
+5
+0.043583791746925504
+0.07106168688277784
+[16.1313916015625, 15.149547119140625, 14.95122802734375, 16.080380859375, 16.02415771484375]
+<class 'list'>
+5
+16.1313916015625
+15.667341064453126
+[2.41732177734375, 2.6645697021484374, 2.131471862792969, 2.298040313720703, 2.884925537109375]
+<class 'list'>
+5
+2.41732177734375
+2.479265838623047
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:35] my_main Recent Stats | t_env:    1331143 | Episode:    26624
+agent_grad_norm:           0.8974	critic_grad_norm:        117.0011	critic_loss:              14.3686	entropy:                   0.9065
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.6252	q_t_mean:                 15.6129
+return_mean:               0.0206	return_std:                0.0711	target_mean:              15.6673	td_error_abs:              2.4793
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:35] my_main t_env: 1332743 / 2050000
+[INFO 00:09:35] my_main Estimated time left: 1 minutes, 50 seconds. Time passed: 3 minutes, 27 seconds
+[tensor(0.5266, device='cuda:0'), tensor(0.7036, device='cuda:0'), tensor(0.4072, device='cuda:0'), tensor(0.5185, device='cuda:0'), tensor(0.3570, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.5266, device='cuda:0')
+0.50258285
+[tensor(19.1833, device='cuda:0'), tensor(74.9857, device='cuda:0'), tensor(50.5346, device='cuda:0'), tensor(53.7360, device='cuda:0'), tensor(110.0762, device='cuda:0')]
+<class 'list'>
+5
+tensor(19.1833, device='cuda:0')
+61.703167
+[12.453085899353027, 13.359763145446777, 13.839916229248047, 14.911712646484375, 12.801058769226074]
+<class 'list'>
+5
+12.453085899353027
+13.47310733795166
+[0.7781696915626526, 0.9514518976211548, 1.1363872289657593, 1.268759846687317, 1.2125388383865356]
+<class 'list'>
+5
+0.7781696915626526
+1.069461500644684
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.236303329467773, -15.214521408081055, -15.334875106811523, -16.382375717163086, -15.383451461791992]
+<class 'list'>
+5
+-15.236303329467773
+-15.510305404663086
+[15.330087890625, 14.7834326171875, 15.36825439453125, 16.4341796875, 15.637071533203125]
+<class 'list'>
+5
+15.330087890625
+15.510605224609375
+[0.01393849206349206, 0.018250425170068026, 0.03579931972789115, 0.0638499149659864, 0.06952593537414965]
+<class 'list'>
+5
+0.01393849206349206
+0.04027281746031745
+[0.06259030308607638, 0.06969696143774612, 0.09065666779201129, 0.12644807245317213, 0.14540544959513307]
+<class 'list'>
+5
+0.06259030308607638
+0.0989594908728278
+[15.33958984375, 15.256944580078125, 15.68438232421875, 16.677879638671875, 15.210069580078125]
+<class 'list'>
+5
+15.33958984375
+15.633773193359374
+[2.2251132202148436, 2.514371337890625, 2.509862365722656, 2.5946270751953127, 2.0914765930175783]
+<class 'list'>
+5
+2.2251132202148436
+2.387090118408203
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:43] my_main Recent Stats | t_env:    1382343 | Episode:    27648
+agent_grad_norm:           0.5026	critic_grad_norm:         61.7032	critic_loss:              13.4731	entropy:                   1.0695
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.5103	q_t_mean:                 15.5106
+return_mean:               0.0403	return_std:                0.0990	target_mean:              15.6338	td_error_abs:              2.3871
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:43] my_main t_env: 1383943 / 2050000
+[INFO 00:09:43] my_main Estimated time left: 1 minutes, 45 seconds. Time passed: 3 minutes, 35 seconds
+[tensor(0.3570, device='cuda:0'), tensor(0.5814, device='cuda:0'), tensor(0.2377, device='cuda:0'), tensor(0.2012, device='cuda:0'), tensor(0.2395, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3570, device='cuda:0')
+0.32335323
+[tensor(110.0762, device='cuda:0'), tensor(57.9017, device='cuda:0'), tensor(34.4625, device='cuda:0'), tensor(28.2794, device='cuda:0'), tensor(69.4605, device='cuda:0')]
+<class 'list'>
+5
+tensor(110.0762, device='cuda:0')
+60.03606
+[12.801058769226074, 11.536794662475586, 11.681324005126953, 11.830172538757324, 13.139679908752441]
+<class 'list'>
+5
+12.801058769226074
+12.197805976867675
+[1.2125388383865356, 1.050743579864502, 1.0308619737625122, 1.0370582342147827, 1.1154593229293823]
+<class 'list'>
+5
+1.2125388383865356
+1.089332389831543
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.383451461791992, -14.435385704040527, -15.049684524536133, -15.375364303588867, -15.669511795043945]
+<class 'list'>
+5
+-15.383451461791992
+-15.182679557800293
+[15.637071533203125, 14.12153076171875, 14.749820556640625, 15.286162109375, 15.7302783203125]
+<class 'list'>
+5
+15.637071533203125
+15.104972656249998
+[0.06952593537414965, 0.045163690476190475, 0.052561649659863936, 0.045950255102040816, 0.037287414965986386]
+<class 'list'>
+5
+0.06952593537414965
+0.05009778911564625
+[0.14540544959513307, 0.09645826068970054, 0.1200857910311619, 0.11638921261484265, 0.09562583356864687]
+<class 'list'>
+5
+0.14540544959513307
+0.114792909499897
+[15.210069580078125, 14.43442138671875, 14.883736572265626, 15.250380859375, 15.465858154296875]
+<class 'list'>
+5
+15.210069580078125
+15.048893310546873
+[2.0914765930175783, 2.3102737426757813, 2.181124267578125, 2.1107666015625, 2.204038543701172]
+<class 'list'>
+5
+2.0914765930175783
+2.1795359497070312
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:51] my_main Recent Stats | t_env:    1433543 | Episode:    28672
+agent_grad_norm:           0.3234	critic_grad_norm:         60.0361	critic_loss:              12.1978	entropy:                   1.0893
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.1827	q_t_mean:                 15.1050
+return_mean:               0.0501	return_std:                0.1148	target_mean:              15.0489	td_error_abs:              2.1795
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:51] my_main t_env: 1435143 / 2050000
+[INFO 00:09:51] my_main Estimated time left: 1 minutes, 37 seconds. Time passed: 3 minutes, 43 seconds
+[tensor(0.3100, device='cuda:0'), tensor(0.4365, device='cuda:0'), tensor(0.2541, device='cuda:0'), tensor(0.2251, device='cuda:0'), tensor(0.2567, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3100, device='cuda:0')
+0.29646954
+[tensor(29.2517, device='cuda:0'), tensor(76.3083, device='cuda:0'), tensor(93.2848, device='cuda:0'), tensor(42.5366, device='cuda:0'), tensor(39.4735, device='cuda:0')]
+<class 'list'>
+5
+tensor(29.2517, device='cuda:0')
+56.170982
+[11.705305099487305, 11.54000473022461, 11.071480751037598, 11.734323501586914, 13.351967811584473]
+<class 'list'>
+5
+11.705305099487305
+11.880616378784179
+[1.187166452407837, 1.2097398042678833, 1.2610461711883545, 1.2730451822280884, 1.3097259998321533]
+<class 'list'>
+5
+1.187166452407837
+1.2481447219848634
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.850756645202637, -14.78982162475586, -15.33916187286377, -15.590179443359375, -15.977025985717773]
+<class 'list'>
+5
+-14.850756645202637
+-15.309389114379883
+[14.7540234375, 14.96094970703125, 15.249002685546875, 15.205015869140626, 15.9923486328125]
+<class 'list'>
+5
+14.7540234375
+15.232268066406249
+[0.06048398526077097, 0.05984268707482993, 0.06792446145124716, 0.06647534013605443, 0.025542091836734695]
+<class 'list'>
+5
+0.06048398526077097
+0.056053713151927434
+[0.11533836796215978, 0.1119861458368021, 0.1177083394656348, 0.1148917338910841, 0.07061225510608493]
+<class 'list'>
+5
+0.11533836796215978
+0.10610736845235313
+[14.93350830078125, 14.797086181640625, 14.856962890625, 15.445260009765626, 16.20819580078125]
+<class 'list'>
+5
+14.93350830078125
+15.24820263671875
+[2.1888919067382813, 2.1235626220703123, 1.9416595458984376, 2.181133117675781, 2.3649215698242188]
+<class 'list'>
+5
+2.1888919067382813
+2.1600337524414064
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:09:59] my_main Recent Stats | t_env:    1484743 | Episode:    29696
+agent_grad_norm:           0.2965	critic_grad_norm:         56.1710	critic_loss:              11.8806	entropy:                   1.2481
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.3094	q_t_mean:                 15.2323
+return_mean:               0.0561	return_std:                0.1061	target_mean:              15.2482	td_error_abs:              2.1600
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:09:59] my_main t_env: 1486343 / 2050000
+[INFO 00:09:59] my_main Estimated time left: 1 minutes, 29 seconds. Time passed: 3 minutes, 51 seconds
+[tensor(0.1658, device='cuda:0'), tensor(0.4931, device='cuda:0'), tensor(0.2724, device='cuda:0'), tensor(0.2723, device='cuda:0'), tensor(0.3590, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.1658, device='cuda:0')
+0.31252083
+[tensor(72.5020, device='cuda:0'), tensor(40.3959, device='cuda:0'), tensor(35.9000, device='cuda:0'), tensor(43.8712, device='cuda:0'), tensor(116.1620, device='cuda:0')]
+<class 'list'>
+5
+tensor(72.5020, device='cuda:0')
+61.766212
+[11.645939826965332, 12.784154891967773, 12.868967056274414, 15.854384422302246, 17.354969024658203]
+<class 'list'>
+5
+11.645939826965332
+14.101683044433594
+[1.218295931816101, 1.1816540956497192, 1.298425555229187, 1.272451639175415, 1.0575350522994995]
+<class 'list'>
+5
+1.218295931816101
+1.2056724548339843
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.812411308288574, -15.283246994018555, -15.14896297454834, -16.261547088623047, -17.24717903137207]
+<class 'list'>
+5
+-14.812411308288574
+-15.750669479370117
+[14.9692578125, 15.14437744140625, 15.182825927734376, 16.048555908203124, 17.316600341796875]
+<class 'list'>
+5
+14.9692578125
+15.732323486328124
+[0.0360437925170068, 0.055527210884353743, 0.047555272108843534, 0.06846301020408163, 0.04334608843537415]
+<class 'list'>
+5
+0.0360437925170068
+0.05018707482993197
+[0.09430099525692238, 0.11425258797726634, 0.10642900887794016, 0.1309505928619143, 0.10367944285163391]
+<class 'list'>
+5
+0.09430099525692238
+0.10992252556513542
+[14.73639892578125, 15.390040283203126, 15.077418212890626, 16.06286865234375, 16.7672021484375]
+<class 'list'>
+5
+14.73639892578125
+15.606785644531252
+[2.0305966186523436, 2.3206938171386717, 2.21650390625, 2.5327362060546874, 2.522857666015625]
+<class 'list'>
+5
+2.0305966186523436
+2.3246776428222655
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:07] my_main Recent Stats | t_env:    1535943 | Episode:    30720
+agent_grad_norm:           0.3125	critic_grad_norm:         61.7662	critic_loss:              14.1017	entropy:                   1.2057
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.7507	q_t_mean:                 15.7323
+return_mean:               0.0502	return_std:                0.1099	target_mean:              15.6068	td_error_abs:              2.3247
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:07] my_main t_env: 1537543 / 2050000
+[INFO 00:10:07] my_main Estimated time left: 1 minutes, 19 seconds. Time passed: 3 minutes, 59 seconds
+[tensor(0.3590, device='cuda:0'), tensor(0.7524, device='cuda:0'), tensor(0.5141, device='cuda:0'), tensor(1.8451, device='cuda:0'), tensor(0.8172, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3590, device='cuda:0')
+0.8575724
+[tensor(116.1620, device='cuda:0'), tensor(91.8367, device='cuda:0'), tensor(122.9087, device='cuda:0'), tensor(32.6529, device='cuda:0'), tensor(118.8478, device='cuda:0')]
+<class 'list'>
+5
+tensor(116.1620, device='cuda:0')
+96.48164
+[17.354969024658203, 16.956144332885742, 21.727611541748047, 16.115381240844727, 18.831222534179688]
+<class 'list'>
+5
+17.354969024658203
+18.19706573486328
+[1.0575350522994995, 1.0008195638656616, 1.0155857801437378, 1.240220308303833, 1.0500229597091675]
+<class 'list'>
+5
+1.0575350522994995
+1.07283673286438
+[50.0, 50.0, 50.0, 50.0, 49.892857142857146]
+<class 'list'>
+5
+50.0
+49.97857142857143
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-17.24717903137207, -16.823532104492188, -16.84935188293457, -15.73313045501709, -17.188884735107422]
+<class 'list'>
+5
+-17.24717903137207
+-16.768415641784667
+[17.316600341796875, 16.46369140625, 17.185616455078126, 15.64195068359375, 17.736885986328126]
+<class 'list'>
+5
+17.316600341796875
+16.868948974609378
+[0.04334608843537415, 0.04661989795918368, 0.05760700113378685, 0.07324263038548752, 0.11327947845804988]
+<class 'list'>
+5
+0.04334608843537415
+0.06681901927437642
+[0.10367944285163391, 0.1124459844618096, 0.12759071994739027, 0.13532144715581942, 0.18190471992393872]
+<class 'list'>
+5
+0.10367944285163391
+0.1321884628681184
+[16.7672021484375, 17.0155029296875, 18.095662841796877, 15.59989013671875, 17.03735107421875]
+<class 'list'>
+5
+16.7672021484375
+16.903121826171876
+[2.522857666015625, 2.8243798828125, 3.342109375, 2.6231134033203123, 2.4685601806640625]
+<class 'list'>
+5
+2.522857666015625
+2.7562041015625
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:15] my_main Recent Stats | t_env:    1587119 | Episode:    31744
+agent_grad_norm:           0.8576	critic_grad_norm:         96.4816	critic_loss:              18.1971	entropy:                   1.0728
+ep_length_mean:           49.9786	epsilon:                   0.0100	mix_loss:                -16.7684	q_t_mean:                 16.8689
+return_mean:               0.0668	return_std:                0.1322	target_mean:              16.9031	td_error_abs:              2.7562
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:15] my_main t_env: 1588719 / 2050000
+[INFO 00:10:15] my_main Estimated time left: 1 minutes, 7 seconds. Time passed: 4 minutes, 7 seconds
+[INFO 00:10:17] my_main Updated target network
+[tensor(0.8053, device='cuda:0'), tensor(0.4062, device='cuda:0'), tensor(0.2776, device='cuda:0'), tensor(0.5191, device='cuda:0'), tensor(0.6708, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.8053, device='cuda:0')
+0.5358045
+[tensor(143.3022, device='cuda:0'), tensor(411.5134, device='cuda:0'), tensor(125.6798, device='cuda:0'), tensor(31.0930, device='cuda:0'), tensor(22.0909, device='cuda:0')]
+<class 'list'>
+5
+tensor(143.3022, device='cuda:0')
+146.73587
+[13.231528282165527, 16.441390991210938, 11.037968635559082, 13.157004356384277, 16.721904754638672]
+<class 'list'>
+5
+13.231528282165527
+14.1179594039917
+[0.8920657634735107, 0.8121582269668579, 0.7313351631164551, 0.7603799700737, 0.7626988291740417]
+<class 'list'>
+5
+0.8920657634735107
+0.7917275905609131
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-13.874101638793945, -16.435562133789062, -14.637299537658691, -15.460790634155273, -16.81606674194336]
+<class 'list'>
+5
+-13.874101638793945
+-15.444764137268066
+[13.826884765625, 16.447698974609374, 15.15993408203125, 15.18765869140625, 16.7113623046875]
+<class 'list'>
+5
+13.826884765625
+15.466707763671874
+[0.035406037414965986, 0.01248937074829932, 0.012404336734693877, 0.007722151360544218, 0.01290922619047619]
+<class 'list'>
+5
+0.035406037414965986
+0.016186224489795918
+[0.08748108881200335, 0.054138040843607266, 0.051638194565449866, 0.039260579323849444, 0.05402757961746809]
+<class 'list'>
+5
+0.08748108881200335
+0.05730909663247561
+[14.8238720703125, 14.0529443359375, 14.569462890625, 15.22962158203125, 16.740614013671873]
+<class 'list'>
+5
+14.8238720703125
+15.083302978515624
+[2.755921630859375, 2.4208795166015626, 1.8723516845703125, 2.2779248046875, 2.563019104003906]
+<class 'list'>
+5
+2.755921630859375
+2.378019348144531
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:22] my_main Recent Stats | t_env:    1638319 | Episode:    32768
+agent_grad_norm:           0.5358	critic_grad_norm:        146.7359	critic_loss:              14.1180	entropy:                   0.7917
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.4448	q_t_mean:                 15.4667
+return_mean:               0.0162	return_std:                0.0573	target_mean:              15.0833	td_error_abs:              2.3780
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:23] my_main t_env: 1639919 / 2050000
+[INFO 00:10:23] my_main Estimated time left: 1 minutes, 2 seconds. Time passed: 4 minutes, 14 seconds
+[tensor(0.6708, device='cuda:0'), tensor(0.6242, device='cuda:0'), tensor(0.5935, device='cuda:0'), tensor(0.6054, device='cuda:0'), tensor(0.3992, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.6708, device='cuda:0')
+0.57862633
+[tensor(22.0909, device='cuda:0'), tensor(24.7641, device='cuda:0'), tensor(61.6743, device='cuda:0'), tensor(16.1276, device='cuda:0'), tensor(43.9542, device='cuda:0')]
+<class 'list'>
+5
+tensor(22.0909, device='cuda:0')
+33.72221
+[16.721904754638672, 13.327454566955566, 14.279170036315918, 14.223814964294434, 12.524377822875977]
+<class 'list'>
+5
+16.721904754638672
+14.215344429016113
+[0.7626988291740417, 0.7853856086730957, 0.7976617217063904, 0.8367158770561218, 0.9372279644012451]
+<class 'list'>
+5
+0.7626988291740417
+0.823938000202179
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-16.81606674194336, -15.024707794189453, -16.246055603027344, -15.843698501586914, -14.891249656677246]
+<class 'list'>
+5
+-16.81606674194336
+-15.764355659484863
+[16.7113623046875, 14.886448974609374, 16.30091796875, 15.660792236328126, 14.91006103515625]
+<class 'list'>
+5
+16.7113623046875
+15.693916503906252
+[0.01290922619047619, 0.038887117346938775, 0.020337301587301588, 0.024578373015873015, 0.045486111111111116]
+<class 'list'>
+5
+0.01290922619047619
+0.028439625850340135
+[0.05402757961746809, 0.0890242020715592, 0.06862433830563408, 0.0751470210052243, 0.10830763481553711]
+<class 'list'>
+5
+0.05402757961746809
+0.07902615516308456
+[16.740614013671873, 15.15130615234375, 15.784688720703125, 15.754693603515625, 14.478082275390625]
+<class 'list'>
+5
+16.740614013671873
+15.581876953124999
+[2.563019104003906, 2.445107116699219, 2.138367004394531, 2.38224365234375, 2.0281715393066406]
+<class 'list'>
+5
+2.563019104003906
+2.3113816833496093
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:31] my_main Recent Stats | t_env:    1689519 | Episode:    33792
+agent_grad_norm:           0.5786	critic_grad_norm:         33.7222	critic_loss:              14.2153	entropy:                   0.8239
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.7644	q_t_mean:                 15.6939
+return_mean:               0.0284	return_std:                0.0790	target_mean:              15.5819	td_error_abs:              2.3114
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:31] my_main t_env: 1691119 / 2050000
+[INFO 00:10:31] my_main Estimated time left: 58 seconds. Time passed: 4 minutes, 23 seconds
+[tensor(0.8732, device='cuda:0'), tensor(0.4296, device='cuda:0'), tensor(0.4356, device='cuda:0'), tensor(0.7432, device='cuda:0'), tensor(0.3452, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.8732, device='cuda:0')
+0.5653744
+[tensor(16.8856, device='cuda:0'), tensor(20.1139, device='cuda:0'), tensor(53.0060, device='cuda:0'), tensor(36.0646, device='cuda:0'), tensor(27.1390, device='cuda:0')]
+<class 'list'>
+5
+tensor(16.8856, device='cuda:0')
+30.641811
+[14.762414932250977, 14.158537864685059, 12.697519302368164, 11.061655044555664, 14.195042610168457]
+<class 'list'>
+5
+14.762414932250977
+13.375033950805664
+[1.0406062602996826, 1.0922086238861084, 1.1016696691513062, 1.036696434020996, 1.0208041667938232]
+<class 'list'>
+5
+1.0406062602996826
+1.0583970308303834
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.95651912689209, -15.664098739624023, -15.122721672058105, -13.63820743560791, -16.301971435546875]
+<class 'list'>
+5
+-15.95651912689209
+-15.336703681945801
+[16.055672607421876, 15.724085693359376, 15.20479736328125, 13.588162841796875, 16.08311767578125]
+<class 'list'>
+5
+16.055672607421876
+15.331167236328124
+[0.018579931972789114, 0.029198554421768712, 0.017814625850340136, 0.03257865646258503, 0.035172193877551015]
+<class 'list'>
+5
+0.018579931972789114
+0.026668792517006802
+[0.06618191051311595, 0.08501424554981352, 0.061042266497927766, 0.09897413951509117, 0.10349680002407097]
+<class 'list'>
+5
+0.06618191051311595
+0.08294187242000386
+[16.09691162109375, 15.594688720703125, 14.741640625, 14.02804443359375, 15.8500341796875]
+<class 'list'>
+5
+16.09691162109375
+15.262263916015623
+[2.4183685302734377, 2.403305969238281, 2.072076416015625, 2.2430560302734377, 2.285561218261719]
+<class 'list'>
+5
+2.4183685302734377
+2.2844736328125004
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:39] my_main Recent Stats | t_env:    1740719 | Episode:    34816
+agent_grad_norm:           0.5654	critic_grad_norm:         30.6418	critic_loss:              13.3750	entropy:                   1.0584
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.3367	q_t_mean:                 15.3312
+return_mean:               0.0267	return_std:                0.0829	target_mean:              15.2623	td_error_abs:              2.2845
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:39] my_main t_env: 1742319 / 2050000
+[INFO 00:10:39] my_main Estimated time left: 50 seconds. Time passed: 4 minutes, 31 seconds
+[tensor(0.3452, device='cuda:0'), tensor(0.9650, device='cuda:0'), tensor(0.4404, device='cuda:0'), tensor(0.4376, device='cuda:0'), tensor(0.2999, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3452, device='cuda:0')
+0.4976039
+[tensor(27.1390, device='cuda:0'), tensor(49.8480, device='cuda:0'), tensor(45.1702, device='cuda:0'), tensor(15.6867, device='cuda:0'), tensor(11.7355, device='cuda:0')]
+<class 'list'>
+5
+tensor(27.1390, device='cuda:0')
+29.91586
+[14.195042610168457, 14.8861083984375, 13.415390968322754, 13.132136344909668, 11.221332550048828]
+<class 'list'>
+5
+14.195042610168457
+13.370002174377442
+[1.0208041667938232, 1.068150520324707, 1.2444590330123901, 1.2687093019485474, 1.2959702014923096]
+<class 'list'>
+5
+1.0208041667938232
+1.1796186447143555
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-16.301971435546875, -16.45230484008789, -15.098200798034668, -14.897059440612793, -14.586069107055664]
+<class 'list'>
+5
+-16.301971435546875
+-15.467121124267578
+[16.08311767578125, 16.598037109375, 15.144150390625, 14.84126220703125, 14.435142822265625]
+<class 'list'>
+5
+16.08311767578125
+15.420342041015624
+[0.035172193877551015, 0.02067743764172336, 0.033083545918367346, 0.021598639455782314, 0.037585034013605446]
+<class 'list'>
+5
+0.035172193877551015
+0.029623370181405893
+[0.10349680002407097, 0.06731424380262743, 0.10287959526651203, 0.07570101422167594, 0.10933529165886346]
+<class 'list'>
+5
+0.10349680002407097
+0.09174538899474997
+[15.8500341796875, 16.202333984375, 15.618095703125, 14.768265380859376, 14.3896923828125]
+<class 'list'>
+5
+15.8500341796875
+15.365684326171877
+[2.285561218261719, 2.279859924316406, 2.4879937744140626, 2.2795944213867188, 2.138344268798828]
+<class 'list'>
+5
+2.285561218261719
+2.294270721435547
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:47] my_main Recent Stats | t_env:    1791919 | Episode:    35840
+agent_grad_norm:           0.4976	critic_grad_norm:         29.9159	critic_loss:              13.3700	entropy:                   1.1796
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.4671	q_t_mean:                 15.4203
+return_mean:               0.0296	return_std:                0.0917	target_mean:              15.3657	td_error_abs:              2.2943
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:47] my_main t_env: 1793519 / 2050000
+[INFO 00:10:47] my_main Estimated time left: 39 seconds. Time passed: 4 minutes, 39 seconds
+[tensor(0.5491, device='cuda:0'), tensor(0.3909, device='cuda:0'), tensor(0.3988, device='cuda:0'), tensor(0.5522, device='cuda:0'), tensor(0.6543, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.5491, device='cuda:0')
+0.50907713
+[tensor(60.2440, device='cuda:0'), tensor(18.8667, device='cuda:0'), tensor(20.8827, device='cuda:0'), tensor(15.5861, device='cuda:0'), tensor(14.4936, device='cuda:0')]
+<class 'list'>
+5
+tensor(60.2440, device='cuda:0')
+26.014612
+[14.685046195983887, 11.493827819824219, 12.745674133300781, 12.723416328430176, 12.518928527832031]
+<class 'list'>
+5
+14.685046195983887
+12.83337860107422
+[1.2304284572601318, 1.2582573890686035, 1.247534155845642, 1.2011446952819824, 1.2352735996246338]
+<class 'list'>
+5
+1.2304284572601318
+1.2345276594161987
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-15.514269828796387, -14.897680282592773, -14.910531997680664, -15.009318351745605, -15.19891357421875]
+<class 'list'>
+5
+-15.514269828796387
+-15.106142807006837
+[15.3709716796875, 14.9486376953125, 14.7553857421875, 14.885360107421874, 15.04150390625]
+<class 'list'>
+5
+15.3709716796875
+15.000371826171875
+[0.030665391156462583, 0.033843537414965985, 0.037521258503401364, 0.02392644557823129, 0.040082908163265304]
+<class 'list'>
+5
+0.030665391156462583
+0.03320790816326531
+[0.09392264169996217, 0.1153932869929994, 0.10802112893042516, 0.07569802251971047, 0.12056525089451034]
+<class 'list'>
+5
+0.09392264169996217
+0.1027200662075215
+[15.975823974609375, 14.76766845703125, 14.8283203125, 15.0065673828125, 14.85548828125]
+<class 'list'>
+5
+15.975823974609375
+15.086773681640626
+[2.6672354125976563, 2.1126173400878905, 2.3048326110839845, 2.3137847900390627, 2.21404541015625]
+<class 'list'>
+5
+2.6672354125976563
+2.322503112792969
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:10:55] my_main Recent Stats | t_env:    1843119 | Episode:    36864
+agent_grad_norm:           0.5091	critic_grad_norm:         26.0146	critic_loss:              12.8334	entropy:                   1.2345
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.1061	q_t_mean:                 15.0004
+return_mean:               0.0332	return_std:                0.1027	target_mean:              15.0868	td_error_abs:              2.3225
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:10:56] my_main t_env: 1844719 / 2050000
+[INFO 00:10:56] my_main Estimated time left: 32 seconds. Time passed: 4 minutes, 47 seconds
+[tensor(0.7564, device='cuda:0'), tensor(0.9083, device='cuda:0'), tensor(0.1993, device='cuda:0'), tensor(0.2591, device='cuda:0'), tensor(0.2038, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.7564, device='cuda:0')
+0.4653799
+[tensor(37.3549, device='cuda:0'), tensor(13.8926, device='cuda:0'), tensor(18.2894, device='cuda:0'), tensor(13.4695, device='cuda:0'), tensor(37.3751, device='cuda:0')]
+<class 'list'>
+5
+tensor(37.3549, device='cuda:0')
+24.07632
+[11.756682395935059, 11.073834419250488, 12.61535930633545, 12.84197998046875, 12.9231538772583]
+<class 'list'>
+5
+11.756682395935059
+12.242201995849609
+[1.1790263652801514, 1.2103458642959595, 1.1565616130828857, 1.102845549583435, 1.0612823963165283]
+<class 'list'>
+5
+1.1790263652801514
+1.142012357711792
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.370805740356445, -14.440606117248535, -15.396879196166992, -15.598934173583984, -16.03824234008789]
+<class 'list'>
+5
+-14.370805740356445
+-15.16909351348877
+[14.22268310546875, 14.25518798828125, 15.41381591796875, 15.330797119140625, 15.889075927734375]
+<class 'list'>
+5
+14.22268310546875
+15.02231201171875
+[0.051541241496598646, 0.040736607142857144, 0.0344281462585034, 0.017488662131519273, 0.012234268707482994]
+<class 'list'>
+5
+0.051541241496598646
+0.03128578514739229
+[0.11339192404057231, 0.10348441178926554, 0.10031277494960149, 0.062212093200638856, 0.05518789269483745]
+<class 'list'>
+5
+0.11339192404057231
+0.08691781933498313
+[14.603736572265625, 14.36640380859375, 15.42999267578125, 15.321402587890624, 15.6866845703125]
+<class 'list'>
+5
+14.603736572265625
+15.081644042968751
+[2.3258120727539064, 2.2037913513183596, 2.245351104736328, 2.20919921875, 2.1185546875]
+<class 'list'>
+5
+2.3258120727539064
+2.2205416870117185
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:11:03] my_main Recent Stats | t_env:    1894319 | Episode:    37888
+agent_grad_norm:           0.4654	critic_grad_norm:         24.0763	critic_loss:              12.2422	entropy:                   1.1420
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -15.1691	q_t_mean:                 15.0223
+return_mean:               0.0313	return_std:                0.0869	target_mean:              15.0816	td_error_abs:              2.2205
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:11:04] my_main t_env: 1895919 / 2050000
+[INFO 00:11:04] my_main Estimated time left: 24 seconds. Time passed: 4 minutes, 55 seconds
+[INFO 00:11:08] my_main Updated target network
+[tensor(0.2038, device='cuda:0'), tensor(0.2953, device='cuda:0'), tensor(0.4008, device='cuda:0'), tensor(0.3190, device='cuda:0'), tensor(0.7417, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.2038, device='cuda:0')
+0.3921184
+[tensor(37.3751, device='cuda:0'), tensor(32.7939, device='cuda:0'), tensor(9.4956, device='cuda:0'), tensor(67.5048, device='cuda:0'), tensor(77.9036, device='cuda:0')]
+<class 'list'>
+5
+tensor(37.3751, device='cuda:0')
+45.014626
+[12.9231538772583, 12.586666107177734, 13.836796760559082, 8.23287582397461, 8.806973457336426]
+<class 'list'>
+5
+12.9231538772583
+11.27729320526123
+[1.0612823963165283, 1.1162729263305664, 1.139479160308838, 1.2056221961975098, 1.2430977821350098]
+<class 'list'>
+5
+1.0612823963165283
+1.1531508922576905
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-16.03824234008789, -14.985273361206055, -15.74071979522705, -12.529658317565918, -12.443129539489746]
+<class 'list'>
+5
+-16.03824234008789
+-14.347404670715331
+[15.889075927734375, 14.81734130859375, 15.719541015625, 12.8800634765625, 12.176409912109374]
+<class 'list'>
+5
+15.889075927734375
+14.296486328124999
+[0.012234268707482994, 0.00653344671201814, 0.0055165816326530615, 0.012351190476190476, 0.013307823129251701]
+<class 'list'>
+5
+0.012234268707482994
+0.009988662131519273
+[0.05518789269483745, 0.03512593007858913, 0.03757163534136769, 0.05715738747552419, 0.057329938909707626]
+<class 'list'>
+5
+0.05518789269483745
+0.04847455690000522
+[15.6866845703125, 14.681533203125, 15.81481689453125, 12.158330078125, 12.91817626953125]
+<class 'list'>
+5
+15.6866845703125
+14.251908203124998
+[2.1185546875, 2.2039471435546876, 2.378577880859375, 1.4241905212402344, 2.2158049011230467]
+<class 'list'>
+5
+2.1185546875
+2.0682150268554684
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:11:11] my_main Recent Stats | t_env:    1945519 | Episode:    38912
+agent_grad_norm:           0.3921	critic_grad_norm:         45.0146	critic_loss:              11.2773	entropy:                   1.1532
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -14.3474	q_t_mean:                 14.2965
+return_mean:               0.0100	return_std:                0.0485	target_mean:              14.2519	td_error_abs:              2.0682
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:11:12] my_main t_env: 1947119 / 2050000
+[INFO 00:11:12] my_main Estimated time left: 16 seconds. Time passed: 5 minutes, 3 seconds
+[tensor(0.3052, device='cuda:0'), tensor(0.1938, device='cuda:0'), tensor(0.1382, device='cuda:0'), tensor(0.1341, device='cuda:0'), tensor(0.3887, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3052, device='cuda:0')
+0.23199387
+[tensor(40.6207, device='cuda:0'), tensor(32.9004, device='cuda:0'), tensor(37.3707, device='cuda:0'), tensor(14.4808, device='cuda:0'), tensor(15.8128, device='cuda:0')]
+<class 'list'>
+5
+tensor(40.6207, device='cuda:0')
+28.237085
+[11.058730125427246, 9.861807823181152, 9.407424926757812, 10.267590522766113, 12.303854942321777]
+<class 'list'>
+5
+11.058730125427246
+10.57988166809082
+[1.1461600065231323, 1.1147897243499756, 1.118014931678772, 1.0201432704925537, 1.1888244152069092]
+<class 'list'>
+5
+1.1461600065231323
+1.1175864696502686
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.08559799194336, -13.335943222045898, -13.438685417175293, -13.918197631835938, -14.664002418518066]
+<class 'list'>
+5
+-14.08559799194336
+-13.888485336303711
+[14.271429443359375, 13.04264892578125, 13.47504150390625, 13.6682568359375, 14.724432373046875]
+<class 'list'>
+5
+14.271429443359375
+13.83636181640625
+[0.03626700680272109, 0.020656179138321993, 0.024829931972789116, 0.010962301587301588, 0.013690476190476189]
+<class 'list'>
+5
+0.03626700680272109
+0.021281179138321994
+[0.0980838043492465, 0.06943314289487841, 0.08825666303218976, 0.050134628174001425, 0.05630902043467747]
+<class 'list'>
+5
+0.0980838043492465
+0.07244345177699871
+[13.8827880859375, 13.463616943359375, 12.96122314453125, 13.77655029296875, 14.6873291015625]
+<class 'list'>
+5
+13.8827880859375
+13.754301513671873
+[1.8994403076171875, 2.179082336425781, 1.7473873901367187, 2.025970916748047, 2.2070191955566405]
+<class 'list'>
+5
+1.8994403076171875
+2.011780029296875
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:11:19] my_main Recent Stats | t_env:    1996719 | Episode:    39936
+agent_grad_norm:           0.2320	critic_grad_norm:         28.2371	critic_loss:              10.5799	entropy:                   1.1176
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -13.8885	q_t_mean:                 13.8364
+return_mean:               0.0213	return_std:                0.0724	target_mean:              13.7543	td_error_abs:              2.0118
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:11:20] my_main t_env: 1998319 / 2050000
+[INFO 00:11:20] my_main Estimated time left: 8 seconds. Time passed: 5 minutes, 11 seconds
+[tensor(0.3887, device='cuda:0'), tensor(0.2013, device='cuda:0'), tensor(0.1948, device='cuda:0'), tensor(0.1656, device='cuda:0'), tensor(0.2244, device='cuda:0')]
+<class 'list'>
+5
+tensor(0.3887, device='cuda:0')
+0.23496898
+[tensor(15.8128, device='cuda:0'), tensor(34.1993, device='cuda:0'), tensor(80.7522, device='cuda:0'), tensor(9.8302, device='cuda:0'), tensor(19.1640, device='cuda:0')]
+<class 'list'>
+5
+tensor(15.8128, device='cuda:0')
+31.9517
+[12.303854942321777, 9.540623664855957, 10.815583229064941, 9.993999481201172, 11.723498344421387]
+<class 'list'>
+5
+12.303854942321777
+10.875511932373048
+[1.1888244152069092, 1.2320184707641602, 1.2071523666381836, 1.0461760759353638, 1.03730309009552]
+<class 'list'>
+5
+1.1888244152069092
+1.1422948837280273
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.01]
+<class 'list'>
+1
+0.01
+0.01
+[-14.664002418518066, -12.643659591674805, -14.24815845489502, -13.520933151245117, -14.82776927947998]
+<class 'list'>
+5
+-14.664002418518066
+-13.980904579162598
+[14.724432373046875, 12.461202392578125, 14.137635498046874, 13.3610693359375, 14.81951904296875]
+<class 'list'>
+5
+14.724432373046875
+13.900771728515625
+[0.013690476190476189, 0.02746598639455782, 0.03130137471655329, 0.025588151927437637, 0.023419784580498867]
+<class 'list'>
+5
+0.013690476190476189
+0.024293154761904762
+[0.05630902043467747, 0.10162437165453611, 0.09684880791888913, 0.08024296537878037, 0.07457173219422494]
+<class 'list'>
+5
+0.05630902043467747
+0.08191937951622161
+[14.6873291015625, 12.830203857421875, 13.48204345703125, 13.425626220703125, 14.680048828125]
+<class 'list'>
+5
+14.6873291015625
+13.82105029296875
+[2.2070191955566405, 2.1205694580078127, 1.728968963623047, 2.0082821655273437, 2.0567437744140626]
+<class 'list'>
+5
+2.2070191955566405
+2.024316711425781
+[50.0, 50.0, 50.0, 50.0, 50.0]
+<class 'list'>
+5
+50.0
+50.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[0.0, 0.0, 0.0, 0.0, 0.0]
+<class 'list'>
+5
+0.0
+0.0
+[INFO 00:11:28] my_main Recent Stats | t_env:    2047919 | Episode:    40960
+agent_grad_norm:           0.2350	critic_grad_norm:         31.9517	critic_loss:              10.8755	entropy:                   1.1423
+ep_length_mean:           50.0000	epsilon:                   0.0100	mix_loss:                -13.9809	q_t_mean:                 13.9008
+return_mean:               0.0243	return_std:                0.0819	target_mean:              13.8211	td_error_abs:              2.0243
+test_ep_length_mean:      50.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+[INFO 00:11:28] my_main t_env: 2049519 / 2050000
+[INFO 00:11:28] my_main Estimated time left: 0 seconds. Time passed: 5 minutes, 20 seconds

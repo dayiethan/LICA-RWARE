@@ -1,0 +1,466 @@
+[INFO 16:50:02] pymarl Running command 'my_main'
+[INFO 16:50:02] pymarl Started run with ID "72"
+[DEBUG 16:50:02] pymarl Starting Heartbeat
+[DEBUG 16:50:02] my_main Started
+[INFO 16:50:02] my_main Experiment Parameters:
+[INFO 16:50:02] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 32,
+    'buffer_cpu_only': True,
+    'buffer_size': 32,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'entropy_coef': 0.11,
+    'env': 'gymma',
+    'env_args': {   'common_reward': False,
+                    'key': 'lbforaging:Foraging-8x8-2p-3f-v3',
+                    'pretrained_wrapper': None,
+                    'reward_scalarisation': False,
+                    'seed': 821852815,
+                    'time_limit': 50},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_layers': 2,
+    'label': 'lbf_default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixing_embed_dim': 64,
+    'name': 'lica',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 320000,
+    'save_replay': False,
+    'seed': 821852815,
+    't_max': 2050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 96,
+    'use_cuda': True,
+    'use_tensorboard': True}
+
+[INFO 16:50:03] my_main Beginning training for 2050000 timesteps
+<class 'str'>
+[array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32), array([1., 4., 3., 4., 3., 3., 5., 1., 1., 6., 5., 2., 6., 4., 1., 1., 4.,
+       3., 4., 3., 3., 5., 1., 1., 6., 4., 1., 6., 5., 2.], dtype=float32)]
+<class 'list'>
+torch.float32
+<class 'str'>
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:106: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+<class 'list'>
+torch.int32
+<class 'str'>
+<class 'list'>
+torch.float32
+<class 'str'>
+<class 'torch.Tensor'>
+torch.int64
+<class 'str'>
+/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/components/episode_buffer.py:106: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-9:
+Process Process-21:
+Process Process-1:
+Process Process-16:
+Process Process-23:
+Process Process-25:
+Process Process-22:
+Process Process-10:
+Process Process-8:
+Process Process-17:
+Process Process-29:
+Process Process-28:
+Process Process-26:
+Process Process-30:
+Process Process-31:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+Traceback (most recent call last):
+ValueError: too many values to unpack (expected 3)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-11:
+Process Process-19:
+Process Process-14:
+Process Process-4:
+Process Process-15:
+Process Process-7:
+Process Process-24:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-13:
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-3:
+Process Process-5:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-20:
+Process Process-2:
+Process Process-32:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-12:
+Process Process-6:
+Process Process-18:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)
+/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/gymnasium/utils/passive_env_checker.py:246: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+  logger.warn(
+Process Process-27:
+Traceback (most recent call last):
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/dayiethan/anaconda3/envs/lica/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/runners/parallel_runner.py", line 225, in env_worker
+    reward, terminated, env_info = env.step(actions)
+ValueError: too many values to unpack (expected 3)

@@ -1,0 +1,120 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.6",
+      "torch==2.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "147643f7d3638f4d93c2ac7acfe28b7ddac4378d",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "147643f7d3638f4d93c2ac7acfe28b7ddac4378d",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      },
+      {
+        "commit": "147643f7d3638f4d93c2ac7acfe28b7ddac4378d",
+        "dirty": true,
+        "url": "git@github.com:dayiethan/LICA-LBF.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_699957be72b5c513fe610489e2499529.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_e338ad6505c641d8106f8df48ae65096.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_1fb84d9cafe77029a4464e3a67126680.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/dayiethan/anaconda3/envs/lica/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/main.py\", line 35, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/run.py\", line 48, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/run.py\", line 210, in run_sequential\n    logger.print_recent_stats()\n",
+    "  File \"/home/dayiethan/Documents/Cal/Research/llm_credit_assignment/LICA-LBF/src/utils/logging.py\", line 48, in print_recent_stats\n    item = \"{:.4f}\".format(np.mean([x[1] for x in self.stats[k][-window:].cpu()]))\n",
+    "AttributeError: 'list' object has no attribute 'cpu'\n"
+  ],
+  "heartbeat": "2024-10-08T06:57:41.857986",
+  "host": {
+    "ENV": {},
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13400F",
+    "gpus": {
+      "driver_version": "535.183.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 4070",
+          "persistence_mode": false,
+          "total_memory": 12282
+        }
+      ]
+    },
+    "hostname": "dayiethan",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-45-generic-x86_64-with-glibc2.39"
+    ],
+    "python_version": "3.9.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "key": "lbforaging:Foraging-8x8-2p-3f-v3",
+        "time_limit": 50
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.time_limit=50",
+        "env_args.key=lbforaging:Foraging-8x8-2p-3f-v3"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-10-08T06:57:31.316669",
+  "status": "FAILED",
+  "stop_time": "2024-10-08T06:57:41.861150"
+}
