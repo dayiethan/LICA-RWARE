@@ -1,9 +1,0 @@
-env_args:
-  env: "lbf"  # Environment type
-  env_name: "Foraging-8x8-2p-1f-v3"  # Specific configuration of the environment
-  # n_agents: 2  # Number of agents
-  # episode_limit: 50
-  # obs_shape: 64  # Observation space for each agent
-  # state_shape: 128  # State space (e.g., concatenation of agent observations)
-  # n_actions: 5  # Number of discrete actions available to each agent
-  # seed: 12345  # Random seed for reproducibility
