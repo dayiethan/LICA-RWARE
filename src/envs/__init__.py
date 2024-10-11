@@ -1,6 +1,5 @@
 from functools import partial
 # from smac.env import MultiAgentEnv, StarCraft2Env
-from envs.lbfenv import LBFEnvWrapper
 from envs.multiagentenv import MultiAgentEnv
 from envs.gymma import GymmaWrapper
 import sys

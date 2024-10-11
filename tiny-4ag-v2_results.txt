@@ -1,0 +1,30 @@
+Recent Stats | t_env:    2048000 | Episode:     4096
+agent_grad_norm:           0.0216	critic_grad_norm:          1.7206	critic_loss:               0.0982	entropy:                   1.6094
+ep_length_mean:          500.0000	epsilon:                   0.0100	mix_loss:                -98.6620	q_t_mean:                 -1.3597
+return_mean:               0.1062	return_std:                0.2956	target_mean:              -1.3550	td_error_abs:              0.2347
+test_ep_length_mean:     500.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+
+Recent Stats | t_env:    2048000 | Episode:     4096
+agent_grad_norm:           0.0164	critic_grad_norm:          0.7228	critic_loss:               0.0642	entropy:                   1.6094
+ep_length_mean:          500.0000	epsilon:                   0.0100	mix_loss:                -100.1054	q_t_mean:                  0.1083
+return_mean:               0.1625	return_std:                0.3601	target_mean:               0.1030	td_error_abs:              0.1960
+test_ep_length_mean:     500.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+
+Recent Stats | t_env:    2048000 | Episode:     4096
+agent_grad_norm:           0.0125	critic_grad_norm:          0.5714	critic_loss:               0.0752	entropy:                   1.6094
+ep_length_mean:          500.0000	epsilon:                   0.0100	mix_loss:                -100.9901	q_t_mean:                  1.0005
+return_mean:               0.1375	return_std:                0.3475	target_mean:               1.0042	td_error_abs:              0.2090
+test_ep_length_mean:     500.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+
+Recent Stats | t_env:    2048000 | Episode:     4096
+agent_grad_norm:           0.0159	critic_grad_norm:          0.2500	critic_loss:               0.0499	entropy:                   1.6094
+ep_length_mean:          500.0000	epsilon:                   0.0100	mix_loss:                -99.8473	q_t_mean:                 -0.1561
+return_mean:               0.1688	return_std:                0.3590	target_mean:              -0.1564	td_error_abs:              0.1728
+test_ep_length_mean:     500.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+
+Recent Stats | t_env:    2048000 | Episode:     4096
+agent_grad_norm:           0.0214	critic_grad_norm:          0.6840	critic_loss:               0.0645	entropy:                   1.6094
+ep_length_mean:          500.0000	epsilon:                   0.0100	mix_loss:                -100.8114	q_t_mean:                  0.8309
+return_mean:               0.1187	return_std:                0.3099	target_mean:               0.8285	td_error_abs:              0.1937
+test_ep_length_mean:     500.0000	test_return_mean:          0.0000	test_return_std:           0.0000	
+

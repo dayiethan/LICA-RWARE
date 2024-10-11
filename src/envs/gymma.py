@@ -2,6 +2,7 @@ from collections.abc import Iterable
 import warnings
 
 import lbforaging
+import rware
 import gymnasium as gym
 from gymnasium.spaces import flatdim
 from gymnasium.wrappers import TimeLimit
@@ -77,26 +78,26 @@ class GymmaWrapper(MultiAgentEnv):
         #         "force_coop": c,
         #     },
         # )
-        s = 15
-        p = 4
-        f = 5
-        c = False
-        gym.register(
-            id="Foraging-{0}x{0}-{1}p-{2}f{3}-v3".format(s, p, f, "-coop" if c else ""),
-            entry_point="lbforaging.foraging:ForagingEnv",
-            kwargs={
-                "players": p,
-                "min_player_level": 1,
-                "max_player_level": 3,
-                "field_size": (s, s),
-                "min_food_level": 1,
-                "max_food_level": 3,
-                "max_num_food": f,
-                "sight": s,
-                "max_episode_steps": 50,
-                "force_coop": c,
-            },
-        )
+        # s = 15
+        # p = 4
+        # f = 5
+        # c = False
+        # gym.register(
+        #     id="Foraging-{0}x{0}-{1}p-{2}f{3}-v3".format(s, p, f, "-coop" if c else ""),
+        #     entry_point="lbforaging.foraging:ForagingEnv",
+        #     kwargs={
+        #         "players": p,
+        #         "min_player_level": 1,
+        #         "max_player_level": 3,
+        #         "field_size": (s, s),
+        #         "min_food_level": 1,
+        #         "max_food_level": 3,
+        #         "max_num_food": f,
+        #         "sight": s,
+        #         "max_episode_steps": 50,
+        #         "force_coop": c,
+        #     },
+        # )
 
         self._env = gym.make(f"{key}", **kwargs)
         self._env = TimeLimit(self._env, max_episode_steps=time_limit)
